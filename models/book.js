@@ -1,4 +1,6 @@
 const {Model, DataTypes} = require('sequelize')
+const sequelize = require('../config/connection')
+
 
 class book extends Model {}
 
@@ -27,7 +29,7 @@ book.init(
       user_id: {
           type: DataTypes.INTEGER,
           references: {
-              model: 'user',
+              model: 'User',
               key: 'id',
           }
       },

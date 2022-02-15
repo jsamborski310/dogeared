@@ -23,8 +23,18 @@ book.init(
         type: DataTypes.STRING,
         allowNull: false,
       },
+
+      user_id: {
+          type: DataTypes.INTEGER,
+          references: {
+              model: 'user',
+              key: 'id',
+          }
+      },
       has_read: {
         type: DataTypes.BOOLEAN,
+
+        
       },
     },
     {

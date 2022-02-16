@@ -29,37 +29,54 @@
 
   <body>
 
-
-
-    <div>
-      <div class="row vh-100">
-
+{{!-- ADD IF/ELSE STATEMENT TO DIFFERENTIATE BETWEEN LOGIN PAGE --}}
         <header>
-          <div class="col-12 col-lg-6 col-md-6 col-sm-12 login-left align-items-center justify-content-center" style="display:flex;">
 
-            <div style="margin-left:-40px;">
-                <h1 style="color:#ffffff;">
-                  dogeared
-                </h1>
-                <h5 style="color:#ffffff; text-align:right; margin-top:-10px;">
-                  loren ipsum
-                </h5>
-            </div>
-          </div>
+            <nav class="navbar navbar-expand-lg navbar-lite">
+                <div class="container-fluid">
 
+                    <!-- Left Side. Logo. -->
+                    <a class="navbar-brand" href="/library">
+                        <h1>dogeared</h1>
+                        <h5>loren ipsum</h5>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Right Side. Navigation -->
+
+                    <div class="offcanvas offcanvas-end shadow justify-content-between" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    
+                        <div class="offcanvas-header justify-content-end">                   
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+
+                        
+                        <div class="offcanvas-body">
+                            <div class="navbar-nav">
+                                <a class="nav-link" href="/library">Library</a>
+                                <a class="nav-link" href="#">Lists</a>
+                                <a class="nav-link" href="/login">Logout</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </nav>
         </header>
 
-        <main>
+      <main>
 
           {{{body}}}
 
-        </main>
-
-      </div>
-    </div>
+      </main>
 
 
 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   </body>
 
 </html>

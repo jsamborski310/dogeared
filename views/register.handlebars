@@ -1,5 +1,56 @@
 {{!-- Registration Form --}}
-<div class="row">
+
+<div class="col-12 col-lg-6 col-md-6 col-sm-12 justify-content-center align-items-center" style="display:flex; padding:0 30px;">
+
+    <div class="col-10">
+        <h2 style="text-align:center; padding-bottom:30px;">Register</h2>
+
+          <form class="form signup-form">
+            <div class="form-group">
+
+              <!-- Username -->
+
+
+              <div style="margin-bottom:20px;">
+                  <label for=" username-signup" class="form-label-h6">Username</label>
+
+                  <input type="text" id="username-signup" class="form-control"
+                      aria-label="Username">
+              </div>
+
+              <!-- Password -->
+              <div>
+                  <label for="password-signup" class="form-label-h6">Password</label>
+                  <input type="password" id="password-signup" class="form-control">
+              </div>
+
+                        <!-- Password with Help Block-->
+                        <!-- <label for="password-signup" class="form-label-h6">Password</label>
+                         <input type="password" id="password-signup" class="form-control"
+                             aria-describedby="passwordHelpBlock">
+                         <div id="passwordHelpBlock" class="form-text">
+                             Your password must be 8-20 characters long, contain letters and numbers, and must not
+                             contain spaces, special characters, or emoji.
+                         </div>  -->
+
+
+
+              <!-- Button -->
+
+              <div class="d-grid gap-2 mt-5">
+                  <button type="submit" class="button-h6 login-button-login">Register</button>
+
+                  <button type="button" class="button-h6 register-button-login">Login</button>
+              </div>
+
+            </div>
+          </form>
+
+    </div>
+</div>
+
+
+{{!-- <div class="row">
 
   <div class="col-md-6">
     <h2>Let's Start!</h2>
@@ -19,5 +70,10 @@
     </form>
   </div>
 </div>
+ --}}
+
 
 <script src="./js/login.js"></script>
+
+
+ 

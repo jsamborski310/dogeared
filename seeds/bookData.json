@@ -5,8 +5,8 @@
     "title": "Just Mercy",
     "author": "Bryan Stevenson",
     "genre": "True Story",
-    "user_id": 1,
-    "has_read": true
+    "has_read": true,
+    "user_id": 1
 
 },
 
@@ -15,8 +15,8 @@
     "title": "Harry Potter",
     "author": "JK Rowling",
     "genre": "Fantasy",
-    "user_id": 2,
-    "has_read": false
+    "has_read": false,
+    "user_id": 2
 
 }
 

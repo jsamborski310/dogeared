@@ -25,25 +25,22 @@ Book.init(
         type: DataTypes.STRING,
         allowNull: false,
       },
-
-      user_id: {
-          type: DataTypes.INTEGER,
-          references: {
-              model: 'User',
-              key: 'id',
-          },
-      },
       has_read: {
-        type: DataTypes.BOOLEAN,
-
-        
+        type: DataTypes.BOOLEAN,        
       },
+      user_id: {
+        type: DataTypes.INTEGER,
+        references: {
+            model: 'user',
+            key: 'id',
+        },
+    },
     },
     {
       sequelize,
       freezeTableName: true,
       underscored: true,
-      modelName: 'Book',
+      modelName: 'book',
     }
   );
   

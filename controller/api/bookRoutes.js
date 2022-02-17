@@ -1,12 +1,15 @@
 const router = require('express').Router();
-const {book} = require('../../models');
+const Book = require('../../models/Book');
 
 // GET all books
 router.get('/', async (req, res) => {
   try {
-    const bookData = await book.findAll({
+    const bookData = await Book.findAll(
+        
       
-    });
+    );
+
+    console.log(bookData)
     res.status(200).json(bookData);
   } catch (err) {
     res.status(500).json(err);
@@ -16,7 +19,7 @@ router.get('/', async (req, res) => {
 // GET a single book
 router.get('/:id', async (req, res) => {
   try {
-    const bookData = await book.findByPk(req.params.id, {
+    const bookData = await Book.findByPk(req.params.id, {
       
     });
 
@@ -34,8 +37,8 @@ router.get('/:id', async (req, res) => {
 // CREATE a book
 router.post('/', async (req, res) => {
   try {
-    const bookData = await book.create({
-      reader_id: req.body.reader_id,
+    const bookData = await Book.create({
+      user_id: req.body.user_id,
     });
     res.status(200).json(bookData);
   } catch (err) {
@@ -46,7 +49,7 @@ router.post('/', async (req, res) => {
 // PUT update a book
 router.put('/:id', async (req, res) => {
     try {
-      const bookData = await book.update(req.body, {
+      const bookData = await Book.update(req.body, {
         where: {
           id: req.params.id,
         },
@@ -64,7 +67,7 @@ router.put('/:id', async (req, res) => {
 // DELETE a book
 router.delete('/:id', async (req, res) => {
   try {
-    const bookData = await book.destroy({
+    const bookData = await Book.destroy({
       where: {
         id: req.params.id,
       },

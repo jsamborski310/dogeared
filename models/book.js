@@ -2,10 +2,10 @@ const {Model, DataTypes} = require('sequelize')
 const sequelize = require('../config/connection')
 
 
-class book extends Model {}
+class Book extends Model {}
 
 
-book.init(
+Book.init(
     {
       id: {
         type: DataTypes.INTEGER,
@@ -31,7 +31,7 @@ book.init(
           references: {
               model: 'User',
               key: 'id',
-          }
+          },
       },
       has_read: {
         type: DataTypes.BOOLEAN,
@@ -43,9 +43,9 @@ book.init(
       sequelize,
       freezeTableName: true,
       underscored: true,
-      modelName: 'book',
+      modelName: 'Book',
     }
   );
   
-  module.exports = book;
+  module.exports = Book;
   

@@ -1,0 +1,58 @@
+<div>
+    <div class="row vh-100">
+
+        {{!-- Left Side. Header. --}}
+        <div class="col-12 col-lg-6 col-md-6 col-sm-12 login-left align-items-center justify-content-center" style="display:flex;">
+
+            <div style="margin-left:-40px;">
+                <h1 style="color:#ffffff;">
+                    dogeared
+                </h1>
+                <h5 style="color:#ffffff; text-align:right; margin-top:-10px;">
+                    loren ipsum
+                </h5>
+            </div>
+        </div> 
+ 
+        {{!-- Right Side. Form. --}}
+        <div class="col-12 col-lg-6 col-md-6 col-sm-12 justify-content-center align-items-center" style="display:flex; padding:0 30px;">
+
+            <div class="col-10">
+                <h2 style="text-align:center; padding-bottom:30px;">Login</h2>
+
+                {{!-- Form Section --}}
+                <form class="form signup-form">
+
+                    <!-- Username -->
+
+                    <div class="form-group" style="margin-bottom:20px;">
+                        <label for=" username-login" class="form-label-h6">Username</label>
+
+                        <input type="text" id="username-login" class="form-control"
+                            aria-label="Username">
+                    </div>
+
+                    <!-- Password -->
+                    <div class="form-group">
+                        <label for="password-login" class="form-label-h6">Password</label>
+                        <input type="password" id="password-login" class="form-control">
+                    </div>      
+
+                    <!-- Button -->
+
+                    <div class="form-group d-grid gap-2 mt-5">
+                        <button type="button" class="button-h6 login-button-login">Login</button>
+
+                        <button type="button" class="button-h6 register-button-login" onclick="location.href = '/register';">Register</button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<script src="./js/login.js"></script>

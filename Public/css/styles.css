@@ -1,0 +1,143 @@
+* {
+    font-family: 'Playfair Display', serif;
+}
+:root {
+    --teal: #0DD1BB;
+}
+body,
+.container {
+    margin:0;
+    padding:0;
+}
+h1 {
+    font-weight:900;
+    font-size: 4.5em;
+}
+h2 {
+    font-weight:900;
+    font-size: 3.5em;
+    text-transform:lowercase;
+}
+h5 {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing:2px;
+}
+h6 {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing:0.5px;
+    font-weight:600;
+    font-size:0.8em;
+}
+.button-h6 {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing:0.5px;
+    font-weight:600;
+    font-size:0.8em;
+}
+.form-label-h6 {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing:0.5px;
+    font-weight:600;
+    font-size:0.8em;
+    margin-bottom:5px;
+}
+
+p {
+    font-size:16px;
+}
+/* LOGIN & REGISTRATION FORM */
+.login-left {
+    background-image: url("/assets/Torn-paper-login.png");
+    background-size: 99%;
+    background-repeat: round;
+}
+.form-control {
+    border: 2px solid black;
+    border-radius: 50px;
+}
+.login-button-login {
+    background-color: var(--teal);
+    border-radius:50px;
+    padding: 12px 0;
+    border:none;
+}
+.login-button-login:hover {
+   background-color:#09e6cc;
+}
+.register-button-login {
+    background-color: black;
+    border-radius:50px;
+    color:white;
+    padding: 12px 0;
+    border:none;
+}
+.register-button-login:hover {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+/* HEADER */
+
+header {
+    background-image: url("/assets/TornPaper.png");
+    background-size: cover;
+    background-repeat: round;
+    padding: 0 5vw;
+    height:170px;
+}
+header h1 {
+    font-size: 1.7em;
+    color:white;
+}
+header h5 {
+    font-size:0.7em;
+    color:white;
+    text-align: right;
+    margin-top:-10px;
+    margin-right:-40px;
+}
+.navbar-nav .nav-link:hover {
+    color:#ffffff90;
+}
+.navbar-nav .nav-link {
+    color:#ffffff;
+}
+
+/* MOBILE NAVBAR */
+.navbar-lite .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 255.1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.navbar-lite .navbar-toggler {
+    color:transparent;
+    border-color:transparent;
+}
+
+.navbar-expand-lg .offcanvas-body {
+    justify-content:end;
+}
+
+/* OFFCANVAS */
+.offcanvas.show {
+    background-color: black;
+}
+.offcanvas-header .btn-close {
+    background-color:var(--teal);
+    border-radius:50px;
+    opacity:100%;
+    margin-top:10px;
+    margin-right:10px;
+}
+.offcanvas-body {
+    margin-top:20px;
+    padding:0 50px;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width:767px) {
+    .login-left {
+        background-repeat: inherit;
+    }
+}

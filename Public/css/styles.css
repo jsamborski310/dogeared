@@ -181,6 +181,38 @@ header h5 {
     width:20px;
   }
 
+  .add-book-card {
+      margin:20px;
+      position:relative;
+      width:120px;
+  }
+
+  .add-book-icon {
+      background-color: var(--teal);
+      padding:1px 4px 5px;
+      line-height:0.9em;
+      color:white;
+      border-radius:50px;
+      font-size:2em;
+      font-weight:900;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      position:absolute;
+      bottom:-25px;
+      right:-10px;
+  }
+
+  .add-book-icon:hover {
+      background-color:black;
+  }
+
+.add-book-button {
+    background-color:transparent;
+    border:none;
+}
+.book-cover:hover {
+   box-shadow:7px 7px 30px rgba(0, 0, 0, 0.158);
+}
+
 /* MEDIA QUERIES */
 @media only screen and (max-width:767px) {
     .login-left {

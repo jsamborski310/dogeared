@@ -33,5 +33,15 @@ router.get('/login', (req, res) => {
 
   });
 
+  router.get('/register', (req, res) => {
+    if (req.session.loggedIn) {
+      res.redirect('/');
+      return;
+    }
+  
+    res.render('register', {layout: 'loggedOut'});
+  });
+
+
 
 module.exports = router;

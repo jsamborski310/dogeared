@@ -1,0 +1,13 @@
+<!-- Loop over each object in the projects array -->
+{{#each books as |book| }}
+<div>
+  <div>
+    <h2>TITLE:
+      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+      <a href="/book/{{book.id}}">{{book.title}}</a>
+    </h2>
+    <p>AUTHOR: {{book.author}}</p>
+  
+  </div>
+</div>
+{{/each}}

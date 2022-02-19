@@ -4,7 +4,8 @@ const bookRoutes = require('./bookRoutes');
 const userRoutes = require('./userRoutes');
 
 // router.use('/notes', notesRoutes);
-router.use('/book', bookRoutes);
-router.use('/user', userRoutes);
+router.use('/users', userRoutes);
+router.use('/books', bookRoutes);
+
 
 module.exports = router;

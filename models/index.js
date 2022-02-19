@@ -1,11 +1,10 @@
 const User = require('./User');
-const Book = require('./book')
+const Book = require('./Book')
 
-// User.hasMany(Book, {
-//   foreignKey: 'user_id'
-// });
-
-User.hasMany(Book);
+User.hasMany(Book, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
+});
 
 Book.belongsTo(User, {
   foreignKey: 'user_id'

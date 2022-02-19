@@ -2,7 +2,7 @@
                 <h2 style="text-align:center; padding-bottom:30px;">Login</h2>
 
                 {{!-- Form Section --}}
-                <form class="form signup-form">
+                <form class="form login-form">
 
                     <!-- Username -->
 
@@ -21,12 +21,16 @@
 
                     <!-- Button -->
 
-                    <div class="form-group d-grid gap-2 mt-5">
-                        <button type="button" class="button-h6 login-button-login">Login</button>
+                    <div class="form-group d-grid gap-2 mt-5 ">
+                       
+                        <button type="submit" class="button-h6 login-button-login">Login</button>
 
-                        <button type="button" class="button-h6 register-button-login" onclick="location.href = '/register';">Register</button>
                     </div>
 
                 </form>
+
+
+                        <a href="/register" class="button-h6 register-button-login">Register</a>
+                {{!-- <script src="./js/login.js"></script> --}}
 
           

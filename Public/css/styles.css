@@ -83,9 +83,13 @@ p {
     color:white;
     padding: 12px 0;
     border:none;
+    text-decoration: none;
+    text-align: center ;
 }
+
 .register-button-login:hover {
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(0, 0, 0, 0.80);
+    color:white;
 }
 /* BUTTONS */
 

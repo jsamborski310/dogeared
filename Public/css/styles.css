@@ -18,6 +18,15 @@ h2 {
     font-size: 3.5em;
     text-transform:lowercase;
 }
+h3 {
+    font-weight:500;
+    font-size: 2.5em;
+    text-transform:lowercase;
+}
+h4 {
+    font-weight:900;
+    font-size: 1em;
+}
 h5 {
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
@@ -78,6 +87,16 @@ p {
 .register-button-login:hover {
     background-color: rgba(0, 0, 0, 0.85);
 }
+/* BUTTONS */
+
+.upload-button {
+    background-color: black;
+    color:white;
+    border-radius: 50px;
+    border:none;
+    padding:15px 35px;
+    margin-top:15px;
+}
 
 /* HEADER */
 
@@ -133,6 +152,65 @@ header h5 {
 .offcanvas-body {
     margin-top:20px;
     padding:0 50px;
+}
+
+/* BOOK COVER */
+.book-cover {
+    border-radius:5px;
+}
+
+/* LIBRARY SIDEBAR */
+.library-sidebar {
+    max-height:75vh;
+    overflow-y:scroll;
+    overflow-x:hidden;
+}
+.library-sidebar::-webkit-scrollbar {
+    width: 5px;              /* width of the entire scrollbar */
+}
+.library-sidebar::-webkit-scrollbar-track {
+    background: transparent;        /* color of the tracking area */
+    width:20px;
+  }
+   
+.library-sidebar::-webkit-scrollbar-thumb {
+    background-color: black;    /* color of the scroll thumb */
+    border-radius: 10px;       /* roundness of the scroll thumb */
+    border: none;  /* creates padding around scroll thumb */
+    height:20px!important;
+    width:20px;
+  }
+
+  .add-book-card {
+      margin:20px;
+      position:relative;
+      width:120px;
+  }
+
+  .add-book-icon {
+      background-color: var(--teal);
+      padding:1px 4px 5px;
+      line-height:0.9em;
+      color:white;
+      border-radius:50px;
+      font-size:2em;
+      font-weight:900;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      position:absolute;
+      bottom:-25px;
+      right:-10px;
+  }
+
+  .add-book-icon:hover {
+      background-color:black;
+  }
+
+.add-book-button {
+    background-color:transparent;
+    border:none;
+}
+.book-cover:hover {
+   box-shadow:7px 7px 30px rgba(0, 0, 0, 0.158);
 }
 
 /* MEDIA QUERIES */

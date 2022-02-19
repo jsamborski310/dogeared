@@ -12,6 +12,7 @@ body,
 h1 {
     font-weight:900;
     font-size: 4.5em;
+    text-transform: lowercase;
 }
 h2 {
     font-weight:900;
@@ -68,14 +69,17 @@ p {
     border: 2px solid black;
     border-radius: 50px;
 }
-.login-button-login {
+.login-button-registration {
     background-color: var(--teal);
     border-radius:50px;
     padding: 12px 0;
     border:none;
+    text-decoration:none;
+    text-align:center;
 }
-.login-button-login:hover {
+.login-button-registration:hover {
    background-color:#09e6cc;
+   color: black;
 }
 .register-button-login {
     background-color: black;

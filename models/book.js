@@ -22,18 +22,25 @@ Book.init(
         allowNull: false,
       },
       genre: {
-        type: DataTypes.STRING,
+        type: DataTypes.BLOB,
         allowNull: false,
       },
       has_read: {
         type: DataTypes.BOOLEAN,        
       },
+
+      image: {
+        type: DataTypes.STRING,
+    },
+
       user_id: {
         type: DataTypes.INTEGER,
         references: {
             model: 'user',
             key: 'id',
         },
+
+   
     },
     },
     {

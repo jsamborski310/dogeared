@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { upload } = require('../../common/multer');
 const {User, Book} = require('../../models');
 
 // GET all books
@@ -34,16 +35,28 @@ router.get('/:id', async (req, res) => {
 });
 
 // CREATE a book
-router.post('/', async (req, res) => {
-  try {
-    const bookData = await Book.create({
-      user_id: req.body.user_id,
-    });
-    res.status(200).json(bookData);
-  } catch (err) {
-    res.status(400).json(err);
-  }
-});
+router.post('/', upload.single('picture'), async (req, res) => {
+    try {
+  
+      const bookData = await Book.create({
+        user_id: req.body.user_id,
+        id: req.body.id,
+        title: req.body.title,
+        author: req.body.author,
+        genre: req.body.genre,
+        has_read: req.body.has_read,
+      });
+  
+      if (req.file) {
+        req.body.picture = req.file.filename
+        bookData.image = req.file.filename
+    }
+  
+      res.status(200).json(bookData);
+    } catch (err) {
+      res.status(400).json(err);
+    }
+  });
 
 // PUT update a book
 router.put('/:id', async (req, res) => {

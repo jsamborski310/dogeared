@@ -9,9 +9,11 @@ router.get('/', withAuth, async (req, res) => {
     // get the  DB
     // get he user and its books
     //render the page based on the data
+    console.log(req.body)
     
-    const bookData = await Book.findAll(req.body
+    const bookData = await Book.findAll({where : { isCommon : true }}
       );
+
 
     // Serialize data so the template can read it
     const books = bookData.map((book) => book.get({ plain: true }));
@@ -49,4 +51,12 @@ router.get('/login', (req, res) => {
 
 
 
+  router.get('/add-new-book', async (req,res) => {
+   
+    res.render('add-new-book', { 
+  
+    });
+  
+  })
+  ;
 module.exports = router;

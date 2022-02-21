@@ -30,6 +30,10 @@ User.init(
       validate: {
         len: [8],
       },
+
+      
+
+
     },
   },
   {

@@ -7,7 +7,8 @@
     "genre": "Fantasy",
     "has_read": true,
     "user_id": 1,
-    "image": "1645348642048535.png"
+    "isCommon": true,
+    "image": "http://localhost:3001/images/mountain.jpeg"
 
 },
 
@@ -17,8 +18,107 @@
     "author": "JK Rowling",
     "genre": "Fantasy",
     "has_read": false,
-    "user_id": 2,
-    "image": "text"
+    "user_id": 1,
+    "isCommon": true,
+    "image": "http://localhost:3001/images/mountain.jpeg"
+    
+
+},
+{
+    "id": 3,
+    "title": "Throne of Glass",
+    "author": "Sarah J. Mass",
+    "genre": "Fantasy",
+    "has_read": true,
+    "user_id": 1,
+    "isCommon": true,
+    "image": "http://localhost:3001/images/mountain.jpeg"
+
+},
+
+{
+    "id": 4,
+    "title": "Foreshadowed",
+    "author": "JK Rowling",
+    "genre": "Fantasy",
+    "has_read": false,
+    "user_id": 1,
+    "isCommon": true,
+    "image": "http://localhost:3001/images/mountain.jpeg"
+    
+
+},
+{
+    "id": 5,
+    "title": "Throne of Glass",
+    "author": "Sarah J. Mass",
+    "genre": "Fantasy",
+    "has_read": true,
+    "user_id": 1,
+    "isCommon": true,
+    "image": "http://localhost:3001/images/mountain.jpeg"
+
+},
+
+{
+    "id": 6,
+    "title": "Foreshadowed",
+    "author": "JK Rowling",
+    "genre": "Fantasy",
+    "has_read": false,
+    "user_id": 1,
+    "isCommon": true,
+    "image": "http://localhost:3001/images/mountain.jpeg"
+    
+
+},
+
+{
+    "id": 7,
+    "title": "Throne of Glass",
+    "author": "Sarah J. Mass",
+    "genre": "Fantasy",
+    "has_read": true,
+    "user_id": 1,
+    "isCommon": true,
+    "image": "http://localhost:3001/images/mountain.jpeg"
+
+},
+
+{
+    "id": 8,
+    "title": "Foreshadowed",
+    "author": "JK Rowling",
+    "genre": "Fantasy",
+    "has_read": false,
+    "user_id": 1,
+    "isCommon": true,
+    "image": "http://localhost:3001/images/mountain.jpeg"
+    
+
+},
+
+{
+    "id": 9,
+    "title": "Throne of Glass",
+    "author": "Sarah J. Mass",
+    "genre": "Fantasy",
+    "has_read": true,
+    "user_id": 1,
+    "isCommon": true,
+    "image": "http://localhost:3001/images/mountain.jpeg"
+
+},
+
+{
+    "id": 10,
+    "title": "Foreshadowed",
+    "author": "JK Rowling",
+    "genre": "Fantasy",
+    "has_read": false,
+    "user_id": 1,
+    "isCommon": true,
+    "image": "http://localhost:3001/images/mountain.jpeg"
     
 
 }

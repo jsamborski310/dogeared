@@ -28,12 +28,19 @@ Book.init(
       has_read: {
         type: DataTypes.BOOLEAN,        
       },
+
+      image: {
+        type: DataTypes.BLOB,
+    },
+
       user_id: {
         type: DataTypes.INTEGER,
         references: {
             model: 'user',
             key: 'id',
         },
+
+   
     },
     },
     {

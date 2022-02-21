@@ -1,5 +1,6 @@
 const sequelize = require('../config/connection');
 const book  = require('../models/Book');
+
 const User = require('../models/User');
 
 const bookData = require('./bookData.json');
@@ -17,6 +18,10 @@ const seedDatabase = async () => {
     individualHooks: true,
     returning: true,
   });
+
+
+
+  
 
 
 

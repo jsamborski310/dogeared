@@ -22,7 +22,7 @@ Book.init(
         allowNull: false,
       },
       genre: {
-        type: DataTypes.BLOB,
+        type: DataTypes.STRING,
         allowNull: false,
       },
       has_read: {
@@ -30,7 +30,7 @@ Book.init(
       },
 
       image: {
-        type: DataTypes.STRING,
+        type: DataTypes.BLOB,
     },
 
       user_id: {

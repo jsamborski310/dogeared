@@ -12,7 +12,7 @@
       });
   
       if (response.ok) {
-        document.location.replace('/add-new-book');
+        document.location.replace('/');
       } else {
         console.log(error);
         alert(response.statusText);

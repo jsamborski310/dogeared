@@ -12,115 +12,22 @@
 
 
                     {{!-- THIS IS THE SECTION WE NEED TO MAKE DYNAMIC --}}
-                    <div class="add-book-card">
-                        <div style="position:relative;">
-                                <button type="submit" class="add-book-button">
-                                <p class="add-book-icon">+</p>
-                                <img class="book-cover" src="/assets/throne-of-glass.jpg" alt="Throne of Glass cover" width="auto" height="150px"/>
-                            </button>
-                        </div>
-                    </div>
+                    
                      {{!-- END --}}
  
-                    <div class="add-book-card">
+
+                    {{#each books as |book| }}
+                    <div>
+                        <div class="add-book-card">
                         <div style="position:relative;">
                                 <button type="submit" class="add-book-button">
                                 <p class="add-book-icon">+</p>
-                                <img class="book-cover" src="/assets/throne-of-glass.jpg" alt="Throne of Glass cover" width="auto" height="150px"/>
+                                <img class="book-cover" src="/images/{{book.image}}" alt="{{book.title}} image" width="auto" height="150px"/>
                             </button>
                         </div>
+                     </div>
                     </div>
-
-                    <div class="add-book-card">
-                        <div style="position:relative;">
-                                <button type="submit" class="add-book-button">
-                                <p class="add-book-icon">+</p>
-                                <img class="book-cover" src="/assets/throne-of-glass.jpg" alt="Throne of Glass cover" width="auto" height="150px"/>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="add-book-card">
-                        <div style="position:relative;">
-                                <button type="submit" class="add-book-button">
-                                <p class="add-book-icon">+</p>
-                                <img class="book-cover" src="/assets/throne-of-glass.jpg" alt="Throne of Glass cover" width="auto" height="150px"/>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="add-book-card">
-                        <div style="position:relative;">
-                                <button type="submit" class="add-book-button">
-                                <p class="add-book-icon">+</p>
-                                <img class="book-cover" src="/assets/throne-of-glass.jpg" alt="Throne of Glass cover" width="auto" height="150px"/>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="add-book-card">
-                        <div style="position:relative;">
-                                <button type="submit" class="add-book-button">
-                                <p class="add-book-icon">+</p>
-                                <img class="book-cover" src="/assets/throne-of-glass.jpg" alt="Throne of Glass cover" width="auto" height="150px"/>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="add-book-card">
-                        <div style="position:relative;">
-                                <button type="submit" class="add-book-button">
-                                <p class="add-book-icon">+</p>
-                                <img class="book-cover" src="/assets/throne-of-glass.jpg" alt="Throne of Glass cover" width="auto" height="150px"/>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="add-book-card">
-                        <div style="position:relative;">
-                                <button type="submit" class="add-book-button">
-                                <p class="add-book-icon">+</p>
-                                <img class="book-cover" src="/assets/throne-of-glass.jpg" alt="Throne of Glass cover" width="auto" height="150px"/>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="add-book-card">
-                        <div style="position:relative;">
-                                <button type="submit" class="add-book-button">
-                                <p class="add-book-icon">+</p>
-                                <img class="book-cover" src="/assets/throne-of-glass.jpg" alt="Throne of Glass cover" width="auto" height="150px"/>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="add-book-card">
-                        <div style="position:relative;">
-                                <button type="submit" class="add-book-button">
-                                <p class="add-book-icon">+</p>
-                                <img class="book-cover" src="/assets/throne-of-glass.jpg" alt="Throne of Glass cover" width="auto" height="150px"/>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="add-book-card">
-                        <div style="position:relative;">
-                                <button type="submit" class="add-book-button">
-                                <p class="add-book-icon">+</p>
-                                <img class="book-cover" src="/assets/throne-of-glass.jpg" alt="Throne of Glass cover" width="auto" height="150px"/>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="add-book-card">
-                        <div style="position:relative;">
-                                <button type="submit" class="add-book-button">
-                                <p class="add-book-icon">+</p>
-                                <img class="book-cover" src="/assets/throne-of-glass.jpg" alt="Throne of Glass cover" width="auto" height="150px"/>
-                            </button>
-                        </div>
-                    </div>
-
+                    {{/each}}
                     
             </div>
         </div>

@@ -221,6 +221,25 @@ header h5 {
    box-shadow:7px 7px 30px rgba(0, 0, 0, 0.158);
 }
 
+/* BOOK DETAILS */
+
+.details-book-cover {
+    border-radius: 10px;
+}
+.section-divider-book-details {
+    border:1.5px solid black;
+    opacity:100%;
+    margin-top:0;
+}
+.notes-counter {
+    background-color:var(--teal);
+    border-radius:50px;
+    padding:9px 13px;
+}
+.book-info {
+    margin-bottom:30px;
+}
+
 /* MEDIA QUERIES */
 @media only screen and (max-width:767px) {
     .login-left {

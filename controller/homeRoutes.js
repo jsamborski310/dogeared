@@ -26,6 +26,38 @@ router.get('/', withAuth, async (req, res) => {
   }
 });
 
+// ////////////////
+// Change to get books/:id?
+
+router.get('/book/:id', async (req, res) => {
+  try {
+    const bookData = await Book.findByPk(req.params.id, {
+      attributes: [
+        'title',
+        'author',
+        'genre',
+        'has_read',
+        'image'
+      ],
+    });
+
+    const book = bookData.get({ plain: true });
+
+    res.render('book', {
+      ...book,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
+///////////////////////
+
+
+
+
 
 router.get('/login', (req, res) => {
     // If the user is already logged in, redirect the request to another route
@@ -46,6 +78,7 @@ router.get('/login', (req, res) => {
   
     res.render('register', {layout: 'loggedOut'});
   });
+
 
 
 

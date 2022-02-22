@@ -1,21 +1,38 @@
+
+
 const createNewBook = async (event) => {
     event.preventDefault();
-  
-    const bookTitle = document.querySelector('.form-book-title').value.trim();
-    const author = document.querySelector('.form-author-name').value.trim();
-    const genre = document.querySelector('.form-genre').value;
-    const readStatus = document.querySelector('.form-read-status').value;
+    console.log("im triggeredddddddddddddddddddddddd");  
+    const bookTitle = document.querySelector('#form-book-title').value.trim();
+    const author = document.querySelector('#form-author-name').value.trim();
+    const genre = document.querySelector('#form-genre').value;
+    const readStatus = document.querySelector('#form-read-status').value;
+    const bookCover = document.querySelector('#form-book-cover').files[0]
 
-  
-    if (bookTitle && author && genre && readStatus) {
+    console.log("here are the values",bookTitle , author, genre , readStatus , bookCover);
+    let formData = new FormData();
+    formData.append('image' , (bookCover));
+    formData.append('title' , (bookTitle));
+    formData.append('author' , (author));
+    formData.append('genre' , (genre));
+    formData.append('has_read' , (readStatus));
+    if (bookTitle && author && genre && readStatus && bookCover) {
+      
       const response = await fetch(`/api/books`, {
         method: 'POST',
-        body: JSON.stringify({ bookTitle, author, genre, readStatus }),
+        body: formData,
+
+        mode: "no-cors",
+              cache: "no-cache",
+              credentials: "same-origin",
+              headers: {
+                "Content-Type": "form-data"
+              },
 
         // This may need edit?
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        // headers: {
+        //   'Content-Type': 'multipart/form-data',
+        // },
       });
   
       if (response.ok) {
@@ -26,27 +43,7 @@ const createNewBook = async (event) => {
     }
   };
 
-  // Upload Book Cover
-  app.post('/upload', function(req, res) {
-    let sampleFile;
-    let uploadPath;
-  
-    if (!req.files || Object.keys(req.files).length === 0) {
-      return res.status(400).send('No files were uploaded.');
-    }
-  
-    // The name of the input field (i.e. "sampleFile") is used to retrieve the uploaded file
-    coverUpload = req.files.bookCoverUpload;
-    uploadPath = __dirname + '../../uploads/' + bookCoverUpload.name;
-  
-    // Use the mv() method to place the file somewhere on your server
-    coverUpload.mv(uploadPath, function(err) {
-      if (err)
-        return res.status(500).send(err);
-  
-      res.send('File uploaded!');
-    });
-  });
+ 
 
 // Option to delete book
 const deleteBook = async (event) => {
@@ -74,3 +71,4 @@ document
 document
   .querySelector('.book-list')
   .addEventListener('click', deleteBook);
+

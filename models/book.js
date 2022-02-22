@@ -33,7 +33,12 @@ Book.init(
         type: DataTypes.BLOB,
     },
 
+    isCommon: {
+      type: DataTypes.BOOLEAN,
+    },
+
       user_id: {
+        allowNull : true,
         type: DataTypes.INTEGER,
         references: {
             model: 'user',

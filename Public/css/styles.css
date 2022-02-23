@@ -105,6 +105,30 @@ p {
     padding:15px 35px;
     margin-top:15px;
 }
+.theme-button {
+    color: black;
+    background-color:var(--teal);
+    border-radius:50px;
+    text-decoration: none;
+    padding: 10px 30px;
+    border:2px solid var(--teal)
+}
+.theme-button:hover {
+    background-color:#09e6cc;
+    border:2px solid #09e6cc;
+    color:black;
+}
+.outlined-button {
+    color:black;
+    border-radius: 50px;
+    text-decoration:none;
+    border: 2px solid black;
+    padding: 10px 30px;
+}
+.outlined-button:hover {
+    background-color: black;
+    color:white;
+}
 
 /* HEADER */
 
@@ -225,6 +249,7 @@ header h5 {
 
 .details-book-cover {
     border-radius: 10px;
+    object-fit: cover;
 }
 .section-divider-book-details {
     border:1.5px solid black;

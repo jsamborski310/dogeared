@@ -20,15 +20,18 @@
 
                 <div class="book-details-sidebar">
                     <div>
-                        
-                        <img class="details-book-cover" src="/assets/throne-of-glass.jpg" alt="Throne of Glass cover" width="200px" height="auto"/>
+                                  
+                        <img class="details-book-cover" src="/images/{{image}}" alt="Throne of Glass cover" width="200px" height="300"/>
 
+{{!-- Add icons --}}
                         <div style="margin-top:40px;">
-                            <h6>Edit</h6>
-                            <h6>Delete</h6>    
+                            <h6><i class="fa-solid fa-pen-to-square"></i> <i class="fa-duotone fa-pen-to-square"></i><i class="fa-solid fa-user"></i>Edit</h6>
+                            <h6><i class="fa-solid fa-circle-minus"></i> Delete</h6>    
 
                             <hr style="width:60%"/>
 
+
+{{!-- Create counter. Will have to do a for each. --}}
                             <div style="display:inline-flex; align-items:center;">
                                 <h6 class="notes-counter" style="margin-right:10px;">3</h6>
                                 <h6>Notes</h6>
@@ -48,29 +51,31 @@
                     <div class="book-info">
                         <h6>Title</h6>
                         <hr class="section-divider-book-details"/>
-                        <p>{{book.title}}</p>
+                        <p>{{title}}</p>
                     </div>
 
                     <!-- Author Input -->
                     <div class="book-info">
                         <h6>Author</h6>
                         <hr class="section-divider-book-details"/>
-                        <p>{{book.author}}</p>
+                        <p>{{author}}</p>
                     </div>
 
                     <!-- Genre Input -->
                     <div class="book-info">
                         <h6>Genre</h6>
                         <hr class="section-divider-book-details"/>
-                        <p>{{book.genre}}</p>
+                        <p>{{genre}}</p>
                     </div>
 
                     <!-- Read Status -->
 
+{{!-- IF statement so if the User has read, they see Read and maybe an icon. Or maybe they see it on the left. --}}
+
                     <div class="book-info">
                         <h6>Read Status</h6>
                         <hr class="section-divider-book-details"/>
-                        <p>{{book.has_read}}</p>
+                        <p>{{has_read}}</p>
                     </div>
 
                     <!-- Read Status -->

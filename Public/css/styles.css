@@ -129,7 +129,8 @@ p {
     border-radius:50px;
     text-decoration: none;
     padding: 10px 30px;
-    border:2px solid var(--teal)
+    border:2px solid var(--teal);
+    min-width:150px;
 }
 .theme-button:hover {
     background-color:#09e6cc;
@@ -321,10 +322,32 @@ header h5 {
     margin-bottom:20px;
 }
 
+/* FOOTER */
+footer {
+    margin-top:150px;
+}
+
+/* ABOUT */
+.team-profile-pic {
+    border-radius:50%;
+}
+.developer-info {
+    padding: 0 30px;
+}
+.about-developer {
+    margin: 30px 0;
+}
+
 /* MEDIA QUERIES */
 @media only screen and (max-width:767px) {
     .login-left {
         background-repeat: inherit;
+    }
+    .about-developer {
+        flex-direction: column;
+    }
+    .developer-info {
+        padding: 30px 0;
     }
 }
 @media only screen and (max-width:991px) {

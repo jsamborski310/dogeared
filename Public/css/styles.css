@@ -337,6 +337,18 @@ footer {
 .about-developer {
     margin: 30px 0;
 }
+.github-link a {
+    color:black;
+    text-decoration:none;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing:0.5px;
+    font-weight:600;
+    font-size:1em;
+}
+.github-link a:hover {
+    text-decoration:overline;
+}
 
 /* MEDIA QUERIES */
 @media only screen and (max-width:767px) {

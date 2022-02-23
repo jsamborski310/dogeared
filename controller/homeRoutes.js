@@ -39,7 +39,8 @@ router.get('/book/:id', async (req, res) => {
         'author',
         'genre',
         'has_read',
-        'image'
+        'image',
+        'description'
       ],
     });
 

@@ -283,4 +283,8 @@ header h5 {
     .login-left {
         background-repeat: inherit;
     }
+    .book-details-header {
+        flex-direction: column;
+        align-items: start!important;
+    }
 }

@@ -30,40 +30,30 @@ router.get('/:id', async (req, res) => {
 
     res.status(200).json(bookData);
   } catch (err) {
-    res.status(500).json(err);
+    res.status(500).json(err);filePath
   }
 });
 
 // CREATE a book
 router.post('/', upload.single('image'), async (req, res) => {
     try {
-  
+      const user_id = req.session.user_id;
+      console.log("req" , req.user ,)
+      var serverUrl = req.protocol + '://' + req.get('host');
+      
+      const filePath = serverUrl + "/" + req.file.path.split('/').slice(1).join('/');
+      
       const bookData = await Book.create({
-        user_id: req.body.user_id,
+        user_id,
         id: req.body.id,
         title: req.body.title,
         author: req.body.author,
         genre: req.body.genre,
         has_read: req.body.has_read,
-        image: req.body.image
+        image: filePath
       });
   
-      if (req.file) {
-        req.body.picture = req.file.filename
-        bookData.image = req.file.filename
-    }
 
-  //   if (!req.file) {
-  //     console.log("No file upload");
-  //   } else {
-  //     console.log(req.file.filename)
-  //     var imgsrc = 'http://127.0.0.1:3000/images/' + req.file.filename
-  //     var insertData = "INSERT INTO book(file_src)VALUES(?)"
-  //     db.query(insertData, [imgsrc], (err, result) => {
-  //         if (err) throw err
-  //         console.log("file uploaded")
-  //     })
-  // }
   
       res.status(200).json(bookData);
     } catch (err) {
@@ -107,6 +97,8 @@ router.delete('/:id', async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
-});
+})
+
+
 
 module.exports = router;

@@ -88,7 +88,7 @@
         <h2>Build your library</h2>
         <h3>Add your favorites to your library</h3>
 
-            <form style="margin-top:50px;">
+            <form enctype="multipart/form-data" style="margin-top:50px;" class="new-book-form">
 
                 <!-- Title Input -->
                 <div class="form-group" style="margin-bottom:20px;">
@@ -136,22 +136,22 @@
                 <div class="form-group" style="margin-bottom:20px;">
                     <label for="form-book-cover" class="form-label-h6">Upload Book Cover</label>
 
-                    <form ref='form-book-cover' 
-                        id='form-book-cover' 
-                        action='http://localhost:8000/upload' 
-                        method='post' 
-                        encType="multipart/form-data">
-                            <input type="file" name="bookCoverImage" />
-                            <input type='submit' value='Upload!' />
-                    </form>
+                    <input type="file" id="form-book-cover">  
+
+
+
                 </div>
                 
                 {{!-- <button type="button" class="button-h6 upload-button">Upload Cover</button> --}}
-
+    <button type="submit">Submit form</button>
             </form>
 
 
       </div>
      
     </div>
+
+
 </div>
+
+  <script src="../js/add-new-book.js"></script>

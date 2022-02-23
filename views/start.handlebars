@@ -17,18 +17,48 @@
  
 
                     {{#each books as |book| }}
-                    
                         <div class="add-book-card">
                         <div style="position:relative;">
                                 <button type="submit" class="add-book-button">
                                 <p class="add-book-icon">+</p>
-                                <img class="book-cover" src="/images/{{book.image}}" alt="{{book.title}} image" width="auto" height="150px"/>
+                                <img class="book-cover" src="{{book.image}}" alt=/Users/juanita/Desktop/CODING PRACTICE/DOGEARED/css/styles.css
+/Users/juanita/Desktop/CODING PRACTICE/DOGEARED/book-details.html"{{book.title}} image" width="auto" height="150px"/>
                             </button>
                         </div>
                      </div>
-                    
+
                     {{/each}}
+
+                 
                     
             </div>
         </div>
     </div>
+
+    <div class="container">
+        <h1></h1>
+    <div class="row g-3">
+          {{#each books as |book| }}
+        <div class="col-xs-3">
+            <div style="position:relative;">
+                                <button type="submit" class="add-book-button">
+                                <p class="add-book-icon">+</p>
+                                <img class="book-cover" src="{{book.image}}" alt="{{book.title}} image" width="auto" height="150px"/>
+                            </button>
+
+    </div>
+        </div>
+  {{/each}}
+
+  
+
+
+
+    <button id="myButton">Press me to navgitate</button>
+    </div>
+
+    <script>
+        document.getElementById("myButton").onclick = function () {
+        window.location.href = "/add-new-book"
+    };
+    </script>

@@ -55,7 +55,13 @@ h6 {
     font-size:0.8em;
     margin-bottom:5px;
 }
-
+.note-title-heading {
+    font-size:2.3em;
+    text-transform:inherit;
+}
+.note-list h4 {
+    font-size:1.4em;
+}
 p {
     font-size:16px;
 }
@@ -205,20 +211,20 @@ header h5 {
 }
 
 /* LIBRARY SIDEBAR */
-.library-sidebar {
+.sidebar {
     max-height:75vh;
     overflow-y:scroll;
     overflow-x:hidden;
 }
-.library-sidebar::-webkit-scrollbar {
+.sidebar::-webkit-scrollbar {
     width: 5px;              /* width of the entire scrollbar */
 }
-.library-sidebar::-webkit-scrollbar-track {
+.sidebar::-webkit-scrollbar-track {
     background: transparent;        /* color of the tracking area */
     width:20px;
   }
    
-.library-sidebar::-webkit-scrollbar-thumb {
+.sidebar::-webkit-scrollbar-thumb {
     background-color: black;    /* color of the scroll thumb */
     border-radius: 10px;       /* roundness of the scroll thumb */
     border: none;  /* creates padding around scroll thumb */
@@ -278,6 +284,43 @@ header h5 {
     margin-bottom:30px;
 }
 
+/* NOTES */
+.note-description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 1.4em; /* fallback */
+    max-height: 2.8em; /* fallback */
+    -webkit-line-clamp:2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+}
+.note-book-details {
+    padding:30px;
+}
+/* NOTE LIST */
+
+.note-list {
+    border:2px solid black;
+    border-radius:20px;
+    padding:30px 40px 20px;;
+}
+.note-list p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        line-height: 1.4em; /* fallback */
+        max-height: 2.8em; /* fallback */
+        -webkit-line-clamp:2; /* number of lines to show */
+        -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+        -ms-box-orient: vertical;
+}
+.note-list {
+    margin-bottom:20px;
+}
+
 /* MEDIA QUERIES */
 @media only screen and (max-width:767px) {
     .login-left {
@@ -285,8 +328,12 @@ header h5 {
     }
 }
 @media only screen and (max-width:991px) {
-    .book-details-header {
+    .book-details-header,
+    .note-header {
         flex-direction: column;
         align-items: start!important;
+    }
+    .note-book-details {
+        padding:10px 0;
     }
 }

@@ -4,121 +4,121 @@
     "id": 1,
     "title": "Throne of Glass",
     "author": "Sarah J. Mass",
-    "genre": "Fantasy",
+    "genre": "Young Adult",
     "has_read": true,
     "user_id": 1,
     "isCommon": true,
-    "image": "http://localhost:3001/images/mountain.jpeg"
+    "image": "http://localhost:3001/images/throne-of-glass.jpg"
 
 },
 
 {
     "id": 2,
     "title": "Foreshadowed",
-    "author": "JK Rowling",
-    "genre": "Fantasy",
+    "author": "Holly M. Campbell",
+    "genre": "Mystery",
     "has_read": false,
     "user_id": 1,
     "isCommon": true,
-    "image": "http://localhost:3001/images/mountain.jpeg"
+    "image": "http://localhost:3001/images/foreshadowed.jpg"
     
 
 },
 {
     "id": 3,
-    "title": "Throne of Glass",
-    "author": "Sarah J. Mass",
+    "title": "Outlander",
+    "author": "Diana Gabaldon",
     "genre": "Fantasy",
     "has_read": true,
     "user_id": 1,
     "isCommon": true,
-    "image": "http://localhost:3001/images/mountain.jpeg"
+    "image": "http://localhost:3001/images/outlander.jpg"
 
 },
 
 {
     "id": 4,
-    "title": "Foreshadowed",
-    "author": "JK Rowling",
+    "title": "A Game of Thrones",
+    "author": "George R.R. Martin",
     "genre": "Fantasy",
     "has_read": false,
     "user_id": 1,
     "isCommon": true,
-    "image": "http://localhost:3001/images/mountain.jpeg"
+    "image": "http://localhost:3001/images/game-of-thrones.jpg"
     
 
 },
 {
     "id": 5,
-    "title": "Throne of Glass",
-    "author": "Sarah J. Mass",
-    "genre": "Fantasy",
+    "title": "The Hate U Give",
+    "author": "Angie Thomas",
+    "genre": "Young Adult",
     "has_read": true,
     "user_id": 1,
     "isCommon": true,
-    "image": "http://localhost:3001/images/mountain.jpeg"
+    "image": "http://localhost:3001/images/the-hate-u-give.jpg"
 
 },
 
 {
     "id": 6,
-    "title": "Foreshadowed",
-    "author": "JK Rowling",
+    "title": "Iron Widow",
+    "author": "Xiran Jay Zhao",
     "genre": "Fantasy",
     "has_read": false,
     "user_id": 1,
     "isCommon": true,
-    "image": "http://localhost:3001/images/mountain.jpeg"
+    "image": "http://localhost:3001/images/iron-widow.jpg"
     
 
 },
 
 {
     "id": 7,
-    "title": "Throne of Glass",
-    "author": "Sarah J. Mass",
-    "genre": "Fantasy",
+    "title": "The Handmaid's Tale",
+    "author": "Margaret Atwood",
+    "genre": "Dystopian",
     "has_read": true,
     "user_id": 1,
     "isCommon": true,
-    "image": "http://localhost:3001/images/mountain.jpeg"
+    "image": "http://localhost:3001/images/the-handmaids-tale.jpg"
 
 },
 
 {
     "id": 8,
-    "title": "Foreshadowed",
-    "author": "JK Rowling",
+    "title": "Harry Potter and the Sorcerer's Stone",
+    "author": "J.K. Rowling",
     "genre": "Fantasy",
     "has_read": false,
     "user_id": 1,
     "isCommon": true,
-    "image": "http://localhost:3001/images/mountain.jpeg"
+    "image": "http://localhost:3001/images/harry-potter.jpg"
     
 
 },
 
 {
     "id": 9,
-    "title": "Throne of Glass",
-    "author": "Sarah J. Mass",
-    "genre": "Fantasy",
+    "title": "Dune",
+    "author": "Frank Herbert",
+    "genre": "Science Fiction",
     "has_read": true,
     "user_id": 1,
     "isCommon": true,
-    "image": "http://localhost:3001/images/mountain.jpeg"
+    "image": "http://localhost:3001/images/dune.jpg"
 
 },
 
 {
     "id": 10,
-    "title": "Foreshadowed",
-    "author": "JK Rowling",
-    "genre": "Fantasy",
+    "title": "It Ends With Us",
+    "author": "Colleen Hoover",
+    "genre": "Romance",
     "has_read": false,
     "user_id": 1,
     "isCommon": true,
-    "image": "http://localhost:3001/images/mountain.jpeg"
+    "image": "http://localhost:3001/images/it-ends-with-us.jpg"
     
 
 }

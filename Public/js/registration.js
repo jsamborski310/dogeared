@@ -12,7 +12,7 @@
       });
   
       if (response.ok) {
-        document.location.replace('/start');
+        document.location = '/start';
       } else {
         console.log(error);
         alert(response.statusText);

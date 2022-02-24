@@ -3,27 +3,6 @@ const { Book, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 
-// LOGIN
-router.get('/login', (req, res) => {
-
-  if (req.session.logged_in) {
-    res.redirect(307, '/');
-    return;
-  }
-
-  res.render('login', {layout: 'loggedOut'});
-
-});
-
-// REGISTER
-router.get('/register', (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect(307, '/start');
-    return;
-  }
-  res.render('register', {layout: 'loggedOut'});
-});
-
 // REGISTER START PAGE
 router.get('/start', withAuth, async (req, res) => {
   try {
@@ -55,6 +34,16 @@ router.get('/start', withAuth, async (req, res) => {
   }
 });
 
+// REGISTER
+router.get('/register', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect(307, '/start');
+    return;
+  }
+  res.render('register', {layout: 'loggedOut'});
+});
+
+
 // HOMEPAGE PAGE
 router.get('/', withAuth, async (req, res) => {
   try {
@@ -81,6 +70,18 @@ router.get('/', withAuth, async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
+});
+
+// LOGIN
+router.get('/login', (req, res) => {
+
+  if (req.session.logged_in) {
+    res.redirect(307, '/');
+    return;
+  }
+
+  res.render('login', {layout: 'loggedOut'});
+
 });
 
 
@@ -114,16 +115,16 @@ router.get('/book/:id', async (req, res) => {
 // ADD NEW BOOK
   router.get('/add-new-book', async (req,res) => { 
     res.render('add-new-book', { 
+      logged_in: req.session.logged_in
     });
   });
 
   // ABOUT
   router.get('/about', async (req,res) => {  
     res.render('about', {  
+      logged_in: req.session.logged_in
     });
   });
-
-
 
 
 module.exports = router;

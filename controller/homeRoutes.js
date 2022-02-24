@@ -89,6 +89,7 @@ router.get('/book/:id', async (req, res) => {
   try {
     const bookData = await Book.findByPk(req.params.id, {
       attributes: [
+        'id',
         'title',
         'author',
         'genre',
@@ -128,7 +129,12 @@ router.get('/add-new-book', withAuth, async (req, res) => {
   try {
     
     const bookData = await Book.findAll({
+      // where: {
+      //   id: req.params.id,
+      //   user_id:req.session.user_id,
+      // },
       attributes: [
+        'id',
         'title',
         'author',
         'genre',
@@ -136,6 +142,13 @@ router.get('/add-new-book', withAuth, async (req, res) => {
         'image',
         'description'
       ],
+      // include: [
+      //   {
+      //   model: User,
+      //   // attributes: ['name'],
+      //   },
+      // ],
+    
     },
 
 );

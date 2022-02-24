@@ -39,7 +39,8 @@ router.get('/book/:id', async (req, res) => {
         'author',
         'genre',
         'has_read',
-        'image'
+        'image',
+        'description'
       ],
     });
 
@@ -85,6 +86,15 @@ router.get('/login', (req, res) => {
   router.get('/add-new-book', async (req,res) => {
    
     res.render('add-new-book', { 
+  
+    });
+  
+  })
+  ;
+
+  router.get('/about', async (req,res) => {
+   
+    res.render('about', { 
   
     });
   

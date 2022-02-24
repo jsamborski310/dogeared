@@ -6,7 +6,7 @@
 }
 body,
 .container {
-    margin:0;
+    margin:0 auto;
     padding:0;
 }
 h1 {
@@ -55,7 +55,13 @@ h6 {
     font-size:0.8em;
     margin-bottom:5px;
 }
-
+.note-title-heading {
+    font-size:2.3em;
+    text-transform:inherit;
+}
+.note-list h4 {
+    font-size:1.4em;
+}
 p {
     font-size:16px;
 }
@@ -97,6 +103,10 @@ p {
 }
 /* BUTTONS */
 
+  input[type="file"] {
+    display: none;
+}
+
 .upload-button {
     background-color: black;
     color:white;
@@ -104,14 +114,23 @@ p {
     border:none;
     padding:15px 35px;
     margin-top:15px;
+    display: inline-block;
+    white-space:nowrap;
+    -webkit-user-select:none;
+    cursor:pointer;
 }
+.upload-button:hover {
+    background-color: rgba(0, 0, 0, 0.80);
+  }
+
 .theme-button {
     color: black;
     background-color:var(--teal);
     border-radius:50px;
     text-decoration: none;
     padding: 10px 30px;
-    border:2px solid var(--teal)
+    border:2px solid var(--teal);
+    min-width:150px;
 }
 .theme-button:hover {
     background-color:#09e6cc;
@@ -189,23 +208,24 @@ header h5 {
 /* BOOK COVER */
 .book-cover {
     border-radius:5px;
+    object-fit: cover;
 }
 
 /* LIBRARY SIDEBAR */
-.library-sidebar {
+.sidebar {
     max-height:75vh;
     overflow-y:scroll;
     overflow-x:hidden;
 }
-.library-sidebar::-webkit-scrollbar {
+.sidebar::-webkit-scrollbar {
     width: 5px;              /* width of the entire scrollbar */
 }
-.library-sidebar::-webkit-scrollbar-track {
+.sidebar::-webkit-scrollbar-track {
     background: transparent;        /* color of the tracking area */
     width:20px;
   }
    
-.library-sidebar::-webkit-scrollbar-thumb {
+.sidebar::-webkit-scrollbar-thumb {
     background-color: black;    /* color of the scroll thumb */
     border-radius: 10px;       /* roundness of the scroll thumb */
     border: none;  /* creates padding around scroll thumb */
@@ -230,7 +250,7 @@ header h5 {
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       position:absolute;
       bottom:-25px;
-      right:-10px;
+      right:-45px;
   }
 
   .add-book-icon:hover {
@@ -265,9 +285,90 @@ header h5 {
     margin-bottom:30px;
 }
 
+/* NOTES */
+.note-description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 1.4em; /* fallback */
+    max-height: 2.8em; /* fallback */
+    -webkit-line-clamp:2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+}
+.note-book-details {
+    padding:30px;
+}
+/* NOTE LIST */
+
+.note-list {
+    border:2px solid black;
+    border-radius:20px;
+    padding:30px 40px 20px;;
+}
+.note-list p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        line-height: 1.4em; /* fallback */
+        max-height: 2.8em; /* fallback */
+        -webkit-line-clamp:2; /* number of lines to show */
+        -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+        -ms-box-orient: vertical;
+}
+.note-list {
+    margin-bottom:20px;
+}
+
+/* FOOTER */
+footer {
+    margin-top:150px;
+}
+
+/* ABOUT */
+.team-profile-pic {
+    border-radius:50%;
+}
+.developer-info {
+    padding: 0 30px;
+}
+.about-developer {
+    margin: 30px 0;
+}
+.github-link a {
+    color:black;
+    text-decoration:none;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing:0.5px;
+    font-weight:600;
+    font-size:1em;
+}
+.github-link a:hover {
+    text-decoration:overline;
+}
+
 /* MEDIA QUERIES */
 @media only screen and (max-width:767px) {
     .login-left {
         background-repeat: inherit;
+    }
+    .about-developer {
+        flex-direction: column;
+    }
+    .developer-info {
+        padding: 30px 0;
+    }
+}
+@media only screen and (max-width:991px) {
+    .book-details-header,
+    .note-header {
+        flex-direction: column;
+        align-items: start!important;
+    }
+    .note-book-details {
+        padding:10px 0;
     }
 }

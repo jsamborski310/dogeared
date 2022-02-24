@@ -1,11 +1,11 @@
-<div class="px-5">
+<div class="container px-5">
     <div class="row align-items-start g-5">
 
 
       <div class="col-lg-4 order-lg-1 col-md-5 order-md-1 col-sm-12 order-sm-2 col-12 order-2">
         <h6 class="mb-4">library</h6>
 
-        <div class="library-sidebar">
+        <div class="sidebar">
             <div class="row mb-3">
                 <div class="d-flex align-items-center">
                     <img class="book-cover" src="/assets/throne-of-glass.jpg" alt="Throne of Glass cover" width="60px" height="auto"/>
@@ -116,6 +116,12 @@
                         <option value="1">Romance</option>
                         <option value="2">Science Fiction</option>
                         <option value="3">Mystery</option>
+                        <option value="4">Young Adult</option>
+                        <option value="5">New Adult</option>
+                        <option value="6">Dystopian</option>
+                        <option value="7">Fantasy</option>
+                        <option value="8">Historical Fantasy</option>
+                        <option value="9">Thriller</option>
                     </select>
                 </div>
 
@@ -133,17 +139,19 @@
 
                 <!-- Upload Cover -->
 
+    
                 <div class="form-group" style="margin-bottom:20px;">
-                    <label for="form-book-cover" class="form-label-h6">Upload Book Cover</label>
+                    <label for="form-book-cover" class="upload-button button-h6">
+                        <input type="file" id="form-book-cover" class="upload-button button-h6"> 
+                        Upload Cover
+                    </label>
 
-                    <input type="file" id="form-book-cover">  
-
-
-
+                     
                 </div>
-                
-                {{!-- <button type="button" class="button-h6 upload-button">Upload Cover</button> --}}
-    <button type="submit">Submit form</button>
+
+                <div style="text-align:end;">           
+                    <button type="submit" class="theme-button button-h6">Submit form</button>
+                </div>
             </form>
 
 

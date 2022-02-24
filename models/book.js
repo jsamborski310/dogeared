@@ -28,6 +28,9 @@ Book.init(
       has_read: {
         type: DataTypes.BOOLEAN,        
       },
+      description: {
+        type: DataTypes.TEXT,
+      },
 
       image: {
         type: DataTypes.BLOB,

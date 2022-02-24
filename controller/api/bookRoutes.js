@@ -50,6 +50,7 @@ router.post('/', upload.single('image'), async (req, res) => {
         author: req.body.author,
         genre: req.body.genre,
         has_read: req.body.has_read,
+        description: req.body.description,
         image: filePath
       });
   

@@ -9,12 +9,19 @@
 
 
         {{#each books as |book| }}
-There is a book.
             <div class="row mb-3">
                 <div class="d-flex align-items-center">
+                    <a href="/book/{{book.id}}">
                     <img class="book-cover" src="{{image}}" alt="{{title}}" width="60px" height="auto"/>
+                    </a>
             
                     <div style="width:100%; padding: 10px 20px;">
+                        <h4 class="mb-1">{{book.title}}</h4>
+                        <p class="mb-0">{{book.author}}</p>
+                    </div>
+                </div>
+            </div>
+        {{/each}}  
                         <h4 class="mb-1">{{title}}</h4>
                         <p class="mb-0">{{author}}</p>
 
@@ -43,10 +50,9 @@ This is the test book.
             {{!-- END --}}
 
 
-  
+ 
 
         </div>
-
     </div>
 
 
@@ -80,15 +86,16 @@ This is the test book.
 
                     <select class="form-select form-control" aria-label="Default select example" id="form-genre">
                         <option selected>Select Main Genre</option>
-                        <option value="1">Romance</option>
-                        <option value="2">Science Fiction</option>
-                        <option value="3">Mystery</option>
-                        <option value="4">Young Adult</option>
-                        <option value="5">New Adult</option>
-                        <option value="6">Dystopian</option>
-                        <option value="7">Fantasy</option>
-                        <option value="8">Historical Fantasy</option>
-                        <option value="9">Thriller</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Science Fiction">Science Fiction</option>
+                        <option value="Mystery">Mystery</option>
+                        <option value="Yount Adult">Young Adult</option>
+                        <option value="New Adult">New Adult</option>
+                        <option value="Dystopian">Dystopian</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Historical Fantasy">Historical Fantasy</option>
+                        <option value="Thriller">Thriller</option>
+                        <option value="Other">Other</option>
                     </select>
                 </div>
 
@@ -103,6 +110,16 @@ This is the test book.
                         <option value="2">Not yet!</option>
                     </select>
                 </div>
+
+                {{!-- Description --}}
+
+                <div class="form-group" style="margin-bottom:20px;">
+                    <label for="form-book-description" class="form-label-h6">Book Description</label>
+
+                    <textarea id="form-book-description" class="form-control" rows="6" cols="50" style="padding:40px"
+                        aria-label="Book Description"></textarea>
+                </div>
+
 
                 <!-- Upload Cover -->
 

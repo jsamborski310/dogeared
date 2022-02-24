@@ -1,6 +1,6 @@
 const createNewBook = async (event) => {
     event.preventDefault();
-    console.log("im triggeredddddddddddddddddddddddd");  
+     
     const bookTitle = document.querySelector('#form-book-title').value.trim();
     const author = document.querySelector('#form-author-name').value.trim();
     const genre = document.querySelector('#form-genre').value;
@@ -34,7 +34,8 @@ const createNewBook = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/');
+        // document.location.replace('/');
+        document.location.reload();
       } else {
         alert('Failed to add new book! Please complete all fields.');
       }
@@ -44,6 +45,8 @@ const createNewBook = async (event) => {
 
 // Option to delete book
 const deleteBook = async (event) => {
+  event.preventDefault();
+
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
 
@@ -52,7 +55,7 @@ const deleteBook = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/profile');
+      document.location.replace('/');
     } else {
       alert('Failed to delete project');
     }

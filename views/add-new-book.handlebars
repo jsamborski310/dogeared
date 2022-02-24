@@ -6,19 +6,24 @@
         <h6 class="mb-4">library</h6>
 
         <div class="sidebar">
+
+
+        {{#each books as |book| }}
+There is a book.
             <div class="row mb-3">
                 <div class="d-flex align-items-center">
-                    <img class="book-cover" src="/assets/throne-of-glass.jpg" alt="Throne of Glass cover" width="60px" height="auto"/>
+                    <img class="book-cover" src="{{image}}" alt="{{title}}" width="60px" height="auto"/>
             
                     <div style="width:100%; padding: 10px 20px;">
-                        <h4 class="mb-1">Throne of Glass</h4>
-                        <p class="mb-0">Sarah J. Mass</p>
+                        <h4 class="mb-1">{{title}}</h4>
+                        <p class="mb-0">{{author}}</p>
                     </div>
                 </div>
             </div>
+        {{/each}}
 
 
-
+This is the test book.
             {{!-- THIS IS THE SECTION WE NEED TO MAKE DYNAMIC --}}
             <div class="row mb-3">
                 <div class="d-flex align-items-center">
@@ -33,50 +38,7 @@
             {{!-- END --}}
 
 
-            <div class="row mb-3">
-                <div class="d-flex align-items-center">
-                    <img class="book-cover" src="/assets/throne-of-glass.jpg" alt="Throne of Glass cover" width="60px" height="auto"/>
-            
-                    <div style="width:100%; padding: 10px 20px;">
-                        <h4 class="mb-1">Throne of Glass</h4>
-                        <p class="mb-0">Sarah J. Mass</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="row mb-3">
-                <div class="d-flex align-items-center">
-                    <img class="book-cover" src="/assets/throne-of-glass.jpg" alt="Throne of Glass cover" width="60px" height="auto"/>
-            
-                    <div style="width:100%; padding: 10px 20px;">
-                        <h4 class="mb-1">Throne of Glass</h4>
-                        <p class="mb-0">Sarah J. Mass</p>
-                    </div>
-                </div>
-            </div>        
-
-            <div class="row mb-3">
-                <div class="d-flex align-items-center">
-                    <img class="book-cover" src="/assets/throne-of-glass.jpg" alt="Throne of Glass cover" width="60px" height="auto"/>
-            
-                    <div style="width:100%; padding: 10px 20px;">
-                        <h4 class="mb-1">Throne of Glass</h4>
-                        <p class="mb-0">Sarah J. Mass</p>
-                    </div>
-                </div>
-            </div>  
-
-
-            <div class="row mb-3">
-                <div class="d-flex align-items-center">
-                    <img class="book-cover" src="/assets/throne-of-glass.jpg" alt="Throne of Glass cover" width="60px" height="auto"/>
-            
-                    <div style="width:100%; padding: 10px 20px;">
-                        <h4 class="mb-1">Throne of Glass</h4>
-                        <p class="mb-0">Sarah J. Mass</p>
-                    </div>
-                </div>
-            </div>          
+  
 
         </div>
 

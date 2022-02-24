@@ -1,5 +1,3 @@
-
-
 const createNewBook = async (event) => {
     event.preventDefault();
     console.log("im triggeredddddddddddddddddddddddd");  
@@ -43,7 +41,6 @@ const createNewBook = async (event) => {
     }
   };
 
- 
 
 // Option to delete book
 const deleteBook = async (event) => {

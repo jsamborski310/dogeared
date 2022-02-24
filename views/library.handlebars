@@ -1,14 +1,34 @@
-        {{!-- My Library --}}
+        {{!-- My Library Page--}}
         <h2 style="text-align:center; padding-bottom:30px;">my library</h2>
 
             <ul class="nav nav-tabs">
-                <li class="nav-item">
+                <li class="nav-item all-books-tab">
                     <a class="nav-link active" aria-current="page" href="#">ALL BOOKS</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item to-read-tab">
                     <a class="nav-link" href="#">TO BE READ</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item have-read-tab">
                     <a class="nav-link" href="#">HAVE READ</a>
                 </li>
             </ul>
+
+        
+        {{#if books.length}}
+        <div>
+
+            {{#each books as |book| }}
+            <div>
+                <div>
+
+                    <h2>TITLE:
+                    <a href="/book/{{book.id}}">{{book.title}}</a>
+                    </h2>
+                    <p>AUTHOR: {{book.author}}</p>
+                
+                </div>
+            </div>
+            {{/each}}
+
+        </div>
+        {{/if}}

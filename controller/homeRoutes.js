@@ -3,7 +3,7 @@ const { Book, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 
-router.get('/', withAuth, async (req, res) => {
+router.get('/start', withAuth, async (req, res) => {
   try {
     // Get all projects and JOIN with user data
     // get the  DB
@@ -11,8 +11,18 @@ router.get('/', withAuth, async (req, res) => {
     //render the page based on the data
     console.log(req.body)
     
-    const bookData = await Book.findAll({where : { isCommon : true }}
-      );
+    const bookData = await Book.findAll({
+      where : { 
+        isCommon : true 
+      },
+      attributes: [
+        'id',
+        'title',
+        'image',
+      ],
+    },
+
+);
 
 
     // Serialize data so the template can read it
@@ -58,6 +68,13 @@ router.get('/book/:id', async (req, res) => {
 
 ///////////////////////
 
+// router.get('/start', async (req,res) => {
+   
+//   res.render('start', { 
+
+//   });
+
+// });
 
 
 
@@ -75,7 +92,7 @@ router.get('/login', (req, res) => {
 
   router.get('/register', (req, res) => {
     if (req.session.loggedIn) {
-      res.redirect('/');
+      res.redirect('/start');
       return;
     }
   
@@ -89,8 +106,7 @@ router.get('/login', (req, res) => {
   
     });
   
-  })
-  ;
+  });
 
   router.get('/about', async (req,res) => {
    
@@ -98,6 +114,9 @@ router.get('/login', (req, res) => {
   
     });
   
-  })
-  ;
+  });
+
+
+
+
 module.exports = router;

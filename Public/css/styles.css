@@ -147,8 +147,16 @@ p {
 .outlined-button:hover {
     background-color: black;
     color:white;
+    border:none;
 }
+.is-danger {
+    background-color:transparent;
+    text-transform:capitalize;
+    border-color:transparent;
+    border-width:0;
+    text-align: left;
 
+}
 /* HEADER */
 
 header {

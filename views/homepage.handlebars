@@ -21,7 +21,6 @@
           <div class="container d-flex justify-content-center">
               <div class="row row-cols-6 row-cols-sm-2 row-cols-md-4 row-cols-lg-6">
 
-                  {{!-- Displays each recommended book. --}}
                   {{#each books as |book| }}
                   <div class="add-book-card">
                       <div style="position:relative;">
@@ -36,20 +35,17 @@
 
       {{!-- To Be Read tab --}}
       <div class="tab-pane" id="2b">
-          <div>
+          <div class="container d-flex justify-content-center">
               {{#if !has_read}}
-              <div>
+              <div class="row row-cols-6 row-cols-sm-2 row-cols-md-4 row-cols-lg-6">
 
                   {{#each books as |book| }}
-                  <div>
-                      <div>
-                          <h2>TITLE:
-                          <a href="/book/{{book.id}}">{{book.title}}</a>
-                          </h2>
-                          <p>AUTHOR: {{book.author}}</p>
+                  <div class="add-book-card">
+                      <div style="position:relative;">
+                              <img class="book-cover" src="{{book.image}}" alt="{{book.title}}" width="125px" height="187px"/>
                       </div>
                   </div>
-                  {{/each}}
+                  {{/each}} 
 
               </div>
               {{/if}}
@@ -58,20 +54,17 @@
 
       {{!-- Have Read tab --}}
       <div class="tab-pane" id="3b">
-          <div>
+          <div class="container d-flex justify-content-center">
               {{#if has_read}}
-              <div>
+              <div class="row row-cols-6 row-cols-sm-2 row-cols-md-4 row-cols-lg-6">
 
                   {{#each books as |book| }}
-                  <div>
-                      <div>
-                          <h2>TITLE:
-                          <a href="/book/{{book.id}}">{{book.title}}</a>
-                          </h2>
-                          <p>AUTHOR: {{book.author}}</p>
+                  <div class="add-book-card">
+                      <div style="position:relative;">
+                              <img class="book-cover" src="{{book.image}}" alt="{{book.title}}" width="125px" height="187px"/>
                       </div>
                   </div>
-                  {{/each}}
+                  {{/each}} 
 
               </div>
               {{/if}}

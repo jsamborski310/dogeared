@@ -29,10 +29,6 @@ const createNewBook = async (event) => {
                 "Content-Type": "form-data"
               },
 
-        // This may need edit?
-        // headers: {
-        //   'Content-Type': 'multipart/form-data',
-        // },
       });
   
       if (response.ok) {
@@ -45,32 +41,8 @@ const createNewBook = async (event) => {
   };
 
 
-// Option to delete book
-const deleteBook = async (event) => {
-  event.preventDefault();
-
-  if (event.target.hasAttribute('data-id')) {
-    const id = event.target.getAttribute('data-id');
-
-    const response = await fetch(`/api/books/${id}`, {
-      method: 'DELETE',
-    });
-
-    if (response.ok) {
-      document.location.replace('/');
-    } else {
-      alert('Failed to delete project');
-    }
-  }
-};
-
 // Wrap '.new-book-form' div around New Book Form html
 document
   .querySelector('.new-book-form')
   .addEventListener('submit', createNewBook);
-
-// Option to delete book
-document
-  .querySelector('.book-list')
-  .addEventListener('click', deleteBook);
 

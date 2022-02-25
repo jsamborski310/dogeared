@@ -1,7 +1,8 @@
   {{!-- My Library Page--}}
   
-  <div class="container">
-  <h2 style="text-align:center; padding-bottom:30px;">my library</h2>
+  {{!-- <div class="container">
+
+ 
   </div>
   <div id="exTab3" class="container">
   <ul class="nav nav-pills">
@@ -12,7 +13,12 @@
       </li>
       <li><a href="#3b" data-toggle="tab">HAVE READ</a>
       </li>
-  </ul>
+  </ul> --}}
+
+<div class="container d-flex align-content-center justify-content-start">
+    <h2 style="text-align:center; padding-bottom:30px;">my library</h2>
+    <a href="/add-new-book" class="library-icon">+</a>
+</div>
 
   <div class="tab-content clearfix">
 
@@ -24,7 +30,9 @@
                   {{#each books as |book| }}
                   <div class="add-book-card">
                       <div style="position:relative;">
+                            <a href="/book/{{book.id}}">
                               <img class="book-cover" src="{{book.image}}" alt="{{book.title}}" width="125px" height="187px"/>
+                            </a>
                       </div>
                   </div>
                   {{/each}}                 
@@ -34,8 +42,8 @@
       </div>
 
       {{!-- To Be Read tab --}}
-      <div class="tab-pane" id="2b">
-          <div class="container d-flex justify-content-center">
+      {{!-- <div class="tab-pane" id="2b">
+          <div class="container d-flex justify-content-center"> --}}
 
 {{!-- do if has_read...else --}}
 
@@ -52,11 +60,11 @@
 
               </div>
               {{/if}} --}}
-          </div>
-      </div>
+          {{!-- </div>
+      </div> --}}
 
       {{!-- Have Read tab --}}
-      <div class="tab-pane" id="3b">
+      {{!-- <div class="tab-pane" id="3b">
           <div class="container d-flex justify-content-center">
               {{#if has_read}}
               <div class="row row-cols-6 row-cols-sm-2 row-cols-md-4 row-cols-lg-6">
@@ -74,10 +82,10 @@
           </div>
       </div>
   </div>
-  </div>
+  </div> --}}
 
   <!-- Bootstrap core JavaScript
       ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  {{!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> --}}

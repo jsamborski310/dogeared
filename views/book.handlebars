@@ -21,12 +21,15 @@
                 <div class="book-details-sidebar">
                     <div>
                                   
-                        <img class="details-book-cover" src="{{image}}" alt="Throne of Glass cover" width="200px" height="300"/>
+                        <img src="{{image}}" alt="Throne of Glass cover" width="200px" height="300"/>
 
-                        <div style="margin-top:40px;">
+                        <div class="details-book-cover" style="margin-top:40px;">
                             <h6><img src="/assets/edit.png" style="margin-right:10px; width:35px; height:auto;" alt="pencil icon"/>Edit</h6>
-                            <h6><img src="/assets/delete.png" style="margin-right:6px; width:35px; height:auto;" alt="minus icon"/></i> Delete</h6>    
-
+                            <div class="delete-book">
+                                <button type="submit" class="delete-button" data-id="{{id}}">
+                                    <h6><img src="/assets/delete.png" style="margin-right:6px; width:35px; height:auto;" alt="minus icon"/></i> Delete</h6>    
+                                </button>
+                            </div>
                             <hr style="width:60%"/>
 
 
@@ -81,4 +84,4 @@
         </div>
     </div>
 
-
+  <script src="/js/delete-book.js"></script>

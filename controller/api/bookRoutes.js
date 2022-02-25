@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { upload } = require('../../common/multer');
 const {User, Book} = require('../../models');
+const withAuth = require('../../utils/auth');
 
 // GET all books
 router.get('/', async (req, res) => {
@@ -81,11 +82,12 @@ router.put('/:id', async (req, res) => {
   });
 
 // DELETE a book
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', withAuth, async (req, res) => {
   try {
     const bookData = await Book.destroy({
       where: {
         id: req.params.id,
+        // user_id: req.session.user_id,
       },
     });
 
@@ -99,7 +101,6 @@ router.delete('/:id', async (req, res) => {
     res.status(500).json(err);
   }
 })
-
 
 
 module.exports = router;

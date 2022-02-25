@@ -113,19 +113,6 @@ router.get('/book/:id', async (req, res) => {
 
 
 
-// // ADD NEW BOOK
-//   router.get('/add-new-book', async (req,res) => { 
-//     res.render('add-new-book', { 
-//     });
-//   });
-
-// ADD NEW BOOK
-  router.get('/add-new-book', async (req,res) => { 
-    res.render('add-new-book', { 
-      logged_in: req.session.logged_in
-    });
-  });
-
   // ABOUT
   router.get('/about', async (req,res) => {  
     res.render('about', {  
@@ -138,10 +125,7 @@ router.get('/add-new-book', withAuth, async (req, res) => {
   try {
     
     const bookData = await Book.findAll({
-      // where: {
-      //   id: req.params.id,
-      //   user_id:req.session.user_id,
-      // },
+
       attributes: [
         'id',
         'title',
@@ -151,12 +135,6 @@ router.get('/add-new-book', withAuth, async (req, res) => {
         'image',
         'description'
       ],
-      // include: [
-      //   {
-      //   model: User,
-      //   // attributes: ['name'],
-      //   },
-      // ],
     
     },
 

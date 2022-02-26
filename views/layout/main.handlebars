@@ -57,7 +57,10 @@
                             <div class="navbar-nav">
                                 <a class="nav-link" href="/">Library</a>
                                 <a class="nav-link" href="/about">About</a>
-                                <a id="logout" class="nav-link" href="/login">Logout</a>
+
+                                {{#if logged_in}}
+                                 <button id="logout" class="button is-danger nav-link">logout</button>
+                                 {{/if}}
                             </div>
                         </div>
                         

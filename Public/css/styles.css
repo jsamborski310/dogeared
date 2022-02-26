@@ -47,6 +47,7 @@ h6 {
     font-weight:600;
     font-size:0.8em;
 }
+
 .form-label-h6 {
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
@@ -107,6 +108,12 @@ p {
     display: none;
 }
 
+.delete-button {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+}
+
 .upload-button {
     background-color: black;
     color:white;
@@ -147,8 +154,16 @@ p {
 .outlined-button:hover {
     background-color: black;
     color:white;
+    border:none;
 }
+.is-danger {
+    background-color:transparent;
+    text-transform:capitalize;
+    border-color:transparent;
+    border-width:0;
+    text-align: left;
 
+}
 /* HEADER */
 
 header {
@@ -233,13 +248,13 @@ header h5 {
     width:20px;
   }
 
-  .add-book-card {
+.add-book-card {
       margin:20px;
       position:relative;
       width:120px;
   }
 
-  .add-book-icon {
+.add-book-icon {
       background-color: var(--teal);
       padding:1px 4px 5px;
       line-height:0.9em;
@@ -253,7 +268,27 @@ header h5 {
       right:-45px;
   }
 
-  .add-book-icon:hover {
+.library-icon {
+    background-color: var(--teal);
+    color:white;
+    border-radius:50px;
+    font-size:2em;
+    font-weight:900;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    margin-left: 20px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.library-icon:hover{
+    background-color: black;
+    color: white;
+}
+
+.add-book-icon:hover {
       background-color:black;
   }
 
@@ -285,6 +320,23 @@ header h5 {
     margin-bottom:30px;
 }
 
+/* LIBRARY TABS - BOOTSTRAP */
+body {
+    padding : 10px ;
+}
+
+/* change border radius for the tab , apply corners on top*/
+  
+#exTab3 .nav-pills > li > a {
+    border-radius: 4px 4px 0 0 ;
+}
+  
+#exTab3 .tab-content {
+    color : white;
+    background-color: #cab2e9;
+    padding : 5px 15px;
+}
+  
 /* NOTES */
 .note-description {
     overflow: hidden;

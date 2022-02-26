@@ -5,19 +5,22 @@ const session = require('express-session');
 const routes = require('./controller');
 const helpers = require('./utils/helpers');
 const sequelize = require('./config/connection');
-const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const hbs = exphbs.create({ helpers, layoutsDir: 'views/layout' });
+
 // const fileUpload = require('express-fileupload');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
+
 // const hbs = exphbs.create({ helpers });
-const hbs = exphbs.create({ helpers, layoutsDir: 'views/layout' });
+
 
 const sess = {
   secret: 'Super secret secret',
   cookie: {
-    maxAge: 86400,
+    maxAge: 864000,
   },
   resave: false,
   saveUninitialized: true,
@@ -29,12 +32,18 @@ const sess = {
 app.use(session(sess));
 // app.use(fileUpload());
 
-app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
+app.use((req, res, next) => {
+  res.set('Cache-Control', 'no-store')
+  next()
+})
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'Public')));
+app.use(express.static(path.join(__dirname, 'Public'), { index : false }));
+
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
 
 app.use(routes);
 

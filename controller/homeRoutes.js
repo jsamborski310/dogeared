@@ -157,7 +157,7 @@ router.get('/add-new-book', withAuth, async (req, res) => {
 
 router.get('/book/edit/:id', async (req, res) => {
   try {
-    const postData = await Post.findByPk(req.params.id, {   
+    const bookData = await Book.findByPk(req.params.id, {   
       title: req.body.title,
       content: req.body.content
     }, 
@@ -169,10 +169,10 @@ router.get('/book/edit/:id', async (req, res) => {
       
     });
 
-    const post = postData.get({ plain: true });
+    const book = bookData.get({ plain: true });
 
-    res.render('edit', {
-      ...post,
+    res.render('edit-book', {
+      ...book,
       logged_in: req.session.logged_in
     });
   } catch (err) {

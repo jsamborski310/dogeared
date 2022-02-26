@@ -24,7 +24,13 @@
                         <img src="{{image}}" alt="Throne of Glass cover" width="200px" height="300"/>
 
                         <div class="details-book-cover" style="margin-top:40px;">
-                            <h6><img src="/assets/edit.png" style="margin-right:10px; width:35px; height:auto;" alt="pencil icon"/>Edit</h6>
+
+                            <a href="/book/edit/{{id}}">
+                                <h6><img src="/assets/edit.png" style="margin-right:10px; width:35px; height:auto;" alt="pencil icon"/>Edit</h6>
+                            </a>
+
+
+
                             <div class="delete-book">
                                 <button class="delete-button" data-id="{{id}}">
                                     <h6><img src="/assets/delete.png" style="margin-right:6px; width:35px; height:auto;" alt="minus icon"/></i> Delete</h6>    

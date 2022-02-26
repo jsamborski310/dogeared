@@ -35,7 +35,7 @@ router.get('/:id', async (req, res) => {
   });
 
 
-// CREATE a notes
+
 router.post('/', async (req, res) => {
     try {
       const book_id = req.session.book_id;
@@ -60,7 +60,7 @@ router.post('/', async (req, res) => {
   });
 
 
-  // PUT update a book
+
 router.put('/:id', async (req, res) => {
     try {
       const notesData = await Notes.update(req.body, {
@@ -78,7 +78,7 @@ router.put('/:id', async (req, res) => {
     }
   });
 
-// DELETE a book
+
 router.delete('/:id', async (req, res) => {
   try {
     const notesData = await Notes.destroy({

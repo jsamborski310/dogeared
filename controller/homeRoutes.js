@@ -89,8 +89,11 @@ router.get('/login', (req, res) => {
   
     });
   
+  });
+
+  router.get('/add-new-note', async (req,res) =>{
+    res.render('add-new-note')
   })
-  ;
 
   router.get('/about', async (req,res) => {
    
@@ -98,6 +101,7 @@ router.get('/login', (req, res) => {
   
     });
   
-  })
-  ;
+  });
+
+  router.get('/start', )
 module.exports = router;

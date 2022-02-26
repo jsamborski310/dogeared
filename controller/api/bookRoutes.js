@@ -7,7 +7,7 @@ const withAuth = require('../../utils/auth');
 router.get('/', async (req, res) => {
   try {
     const bookData = await Book.findAll(
-      req.body
+      req.body,
 );
 
     console.log(bookData)

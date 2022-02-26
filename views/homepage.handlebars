@@ -27,7 +27,9 @@
           <div class="container d-flex justify-content-center">
               <div class="row row-cols-6 row-cols-sm-2 row-cols-md-4 row-cols-lg-6">
 
-                  {{#each books as |book| }}
+            {{#each books as |book|}}
+                {{#if has_read}}
+                  {{!-- {{#each books as |book| }} --}}
                   <div class="add-book-card">
                       <div style="position:relative;">
                             <a href="/book/{{book.id}}">
@@ -35,7 +37,8 @@
                             </a>
                       </div>
                   </div>
-                  {{/each}}                 
+                 {{/if}}
+            {{/each}}                 
                   
               </div>
           </div>  

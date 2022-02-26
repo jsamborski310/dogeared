@@ -1,0 +1,122 @@
+<div class="container px-5">
+    <div class="row align-items-start g-5">
+
+
+      <div class="col-lg-4 order-lg-1 col-md-5 order-md-1 col-sm-12 order-sm-2 col-12 order-2">
+        <h6 class="mb-4">library</h6>
+
+        <div class="sidebar">
+
+
+        {{#each books as |book| }}
+            <div class="row mb-3">
+                <div class="d-flex align-items-center">
+                    <a href="/book/{{book.id}}">
+                    <img class="book-cover" src="{{image}}" alt="{{title}}" width="60px" height="auto"/>
+                    </a>
+            
+                    <div style="width:100%; padding: 10px 20px;">
+                        <h4 class="mb-1">{{book.title}}</h4>
+                        <p class="mb-0">{{book.author}}</p>
+                    </div>
+                </div>
+            </div>
+        {{/each}}  
+
+        </div>
+    </div>
+    
+
+
+
+
+      <div class="col-lg-8 order-lg-2 col-md-7 order-md-2 col-sm-12 order-sm-1 col-12 order-1">
+        <h2>Build your library</h2>
+        <h3>Add your favorites to your library</h3>
+
+            <form enctype="multipart/form-data" style="margin-top:50px;" class="new-book-form">
+
+                <!-- Title Input -->
+                <div class="form-group" style="margin-bottom:20px;">
+                    <label for="form-book-title" class="form-label-h6">Title</label>
+
+                    <input type="text" id="form-book-title" class="form-control"
+                        aria-label="Book Title">
+                </div>
+
+                <!-- Author Input -->
+                <div class="form-group" style="margin-bottom:20px;">
+                    <label for="form-author-name" class="form-label-h6">Author</label>
+
+                    <input type="text" id="form-author-name" class="form-control"
+                        aria-label="Author Name">
+                </div>
+
+                <!-- Genre Input -->
+
+                <div class="form-group" style="margin-bottom:20px;">
+                    <label for="form-genre" class="form-label-h6">Genre</label>
+
+                    <select class="form-select form-control" aria-label="Default select example" id="form-genre">
+                        <option selected>Select Main Genre</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Science Fiction">Science Fiction</option>
+                        <option value="Mystery">Mystery</option>
+                        <option value="Yount Adult">Young Adult</option>
+                        <option value="New Adult">New Adult</option>
+                        <option value="Dystopian">Dystopian</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Historical Fantasy">Historical Fantasy</option>
+                        <option value="Thriller">Thriller</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <!-- Read Status -->
+
+                <div class="form-group" style="margin-bottom:20px;">
+                    <label for="form-read-status" class="form-label-h6">Book Status</label>
+
+                    <select class="form-select form-control" aria-label="Default select example" id="form-read-status">
+                        <option selected>Have you read this title?</option>
+                        <option value="1">Yes!</option>
+                        <option value="2">Not yet!</option>
+                    </select>
+                </div>
+
+                {{!-- Description --}}
+
+                <div class="form-group" style="margin-bottom:20px;">
+                    <label for="form-book-description" class="form-label-h6">Book Description</label>
+
+                    <textarea id="form-book-description" class="form-control" rows="6" cols="50" style="padding:40px"
+                        aria-label="Book Description"></textarea>
+                </div>
+
+
+                <!-- Upload Cover -->
+
+    
+                <div class="form-group" style="margin-bottom:20px;">
+                    <label for="form-book-cover" class="upload-button button-h6">
+                        <input type="file" id="form-book-cover" class="upload-button button-h6"> 
+                        Upload Cover
+                    </label>
+
+                     
+                </div>
+
+                <div style="text-align:end;">           
+                    <button type="submit" class="theme-button button-h6">Submit form</button>
+                </div>
+            </form>
+
+
+      </div>
+     
+    </div>
+
+
+</div>
+
+  <script src="./js/edit-book.js"></script>

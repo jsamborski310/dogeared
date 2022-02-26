@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const { Book, Notes} = require('../../models');
+const { Notes } = require('../../models');
 
 
 

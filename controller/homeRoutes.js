@@ -185,6 +185,36 @@ router.get('/book/edit/:id', async (req, res) => {
   }
 });
 
+// VIEW BOOKS SIDEBAR ON EDIT PAGE
+router.get('/book/edit/:id', withAuth, async (req, res) => {
+  try {
+    
+    const bookData = await Book.findAll({
+
+      attributes: [
+        'id',
+        'title',
+        'author',
+        'genre',
+        'has_read',
+        'image',
+        'description'
+      ],
+    
+    },
+
+);
+    const books = bookData.map((book) => book.get({ plain: true }));
+
+
+    res.render('edit-book', { 
+      books,
+      logged_in: req.session.logged_in 
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 
 module.exports = router;

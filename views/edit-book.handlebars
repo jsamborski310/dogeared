@@ -1,36 +1,7 @@
-<div class="container px-5">
-    <div class="row align-items-start g-5">
+<div class="container px-5 justify-content-center">
+    <div class="row justify-content-center g-5">
 
-
-      <div class="col-lg-4 order-lg-1 col-md-5 order-md-1 col-sm-12 order-sm-2 col-12 order-2">
-        <h6 class="mb-4">library</h6>
-
-        <div class="sidebar">
-
-
-        {{#each books as |book| }}
-            <div class="row mb-3">
-                <div class="d-flex align-items-center">
-                    <a href="/book/{{book.id}}">
-                    <img class="book-cover" src="{{image}}" alt="{{title}}" width="60px" height="auto"/>
-                    </a>
-            
-                    <div style="width:100%; padding: 10px 20px;">
-                        <h4 class="mb-1">{{book.title}}</h4>
-                        <p class="mb-0">{{book.author}}</p>
-                    </div>
-                </div>
-            </div>
-        {{/each}}  
-
-        </div>
-    </div>
-    
-
-
-
-
-      <div class="col-lg-8 order-lg-2 col-md-7 order-md-2 col-sm-12 order-sm-1 col-12 order-1">
+      <div class="col-lg-8 col-md-7 col-sm-12 col-12">
         <h6>Edit Book Details</h6>
         <h1>{{title}}</h1>
 
@@ -97,7 +68,7 @@
 
                 <!-- Upload Cover -->
 
-    
+{{!--     
                 <div class="form-group" style="margin-bottom:20px;">
                     <label for="form-book-cover" class="upload-button button-h6">
                         <input type="file" id="form-book-cover" class="upload-button button-h6"> 
@@ -105,7 +76,7 @@
                     </label>
 
                      
-                </div>
+                </div> --}}
 
                 <div style="text-align:end;">           
                     <button type="submit" class="theme-button button-h6">Update Book</button>
@@ -121,3 +92,5 @@
 </div>
 
   <script src="/js/edit-book.js"></script>
+  
+  

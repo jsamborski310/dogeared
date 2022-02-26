@@ -9,6 +9,11 @@ body,
     margin:0 auto;
     padding:0;
 }
+a {
+    color: black;
+    text-decoration: none;
+}
+
 h1 {
     font-weight:900;
     font-size: 4.5em;
@@ -104,7 +109,7 @@ p {
 }
 /* BUTTONS */
 
-  input[type="file"] {
+input[type="file"] {
     display: none;
 }
 
@@ -320,21 +325,14 @@ header h5 {
     margin-bottom:30px;
 }
 
-/* LIBRARY TABS - BOOTSTRAP */
-body {
-    padding : 10px ;
+/* LIBRARY TABS */
+.library-tab {
+    padding-right: 20px;
 }
 
-/* change border radius for the tab , apply corners on top*/
-  
-#exTab3 .nav-pills > li > a {
-    border-radius: 4px 4px 0 0 ;
-}
-  
-#exTab3 .tab-content {
-    color : white;
-    background-color: #cab2e9;
-    padding : 5px 15px;
+.tab-link:hover {
+    text-decoration: overline;
+    color: black;
 }
   
 /* NOTES */

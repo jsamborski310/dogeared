@@ -49,6 +49,8 @@ router.get('/', withAuth, async (req, res) => {
   try {
     
     const bookData = await Book.findAll({
+
+      order: [['title', 'ASC']],
       attributes: [
         'id',
         'title',
@@ -127,6 +129,9 @@ router.get('/add-new-book', withAuth, async (req, res) => {
     
     const bookData = await Book.findAll({
 
+      
+      order: [['createdAt', 'DESC']],
+      
       attributes: [
         'id',
         'title',

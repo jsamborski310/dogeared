@@ -152,4 +152,34 @@ router.get('/add-new-book', withAuth, async (req, res) => {
   }
 });
 
+
+// EDIT BOOK
+
+router.get('/book/edit/:id', async (req, res) => {
+  try {
+    const postData = await Post.findByPk(req.params.id, {   
+      title: req.body.title,
+      content: req.body.content
+    }, 
+    {
+    where: {
+      id: req.params.id,
+      user_id: req.session.user_id,
+    },
+      
+    });
+
+    const post = postData.get({ plain: true });
+
+    res.render('edit', {
+      ...post,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
+
 module.exports = router;

@@ -11,16 +11,18 @@ Book.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
+Book.hasMany(Notes, {
+  foreignKey: 'book_id',
+  onDelete: 'CASCADE'
+
+});
+
 Notes.belongsTo(Book, {
   foreignKey: 'book_id'
 
 });
 
-Book.hasMany(Notes, {
-  foreignKey: 'book_id',
-  onDelete: 'CASCADE'
 
-})
 
 
 module.exports = { User, Book, Notes };

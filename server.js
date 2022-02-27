@@ -6,16 +6,16 @@ const routes = require('./controller');
 const helpers = require('./utils/helpers');
 const sequelize = require('./config/connection');
 
-const hbs = exphbs.create({ helpers, layoutsDir: 'views/layout' });
+const hbs = exphbs.create({ helpers, layoutsDir: 'views/layout' } );
 
-// const fileUpload = require('express-fileupload');
+
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
-// const hbs = exphbs.create({ helpers });
+
 
 
 const sess = {
@@ -31,7 +31,7 @@ const sess = {
 };
 
 app.use(session(sess));
-// app.use(fileUpload());
+
 
 app.use((req, res, next) => {
   res.set('Cache-Control', 'no-store')

@@ -5,7 +5,10 @@ const editFormHandler = async (event) => {
 
     const author = document.querySelector('#edit-author').value.trim();
 
-    const genre = document.querySelector('#edit-genre').value.trim();
+    // const genre = document.querySelector('#edit-genre').value.trim();
+    // const genre = document.querySelector('#edit-genre').selectedOptions[0].value;
+    const genre = document.querySelector('edit-genre');
+    const selectGenre = genre.value;
 
     const status = document.querySelector('#edit-status').value.trim();
 

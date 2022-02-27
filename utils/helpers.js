@@ -7,4 +7,7 @@ module.exports = {
     // format large numbers with commas
     return parseInt(amount).toLocaleString();
   },
+  json : (data) => {
+    return JSON.stringify(data)
+  }
 };

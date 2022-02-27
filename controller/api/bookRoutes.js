@@ -65,8 +65,9 @@ router.post('/', upload.single('image'), async (req, res) => {
   router.post('/add-existing-book',  async (req, res) => {
     try {
       const user_id = req.session.user_id;
+      const bookImage =  Buffer.from(req.body.image).toString('utf8')
       
-      console.log("body" , req.body);
+      
       const bookData = await Book.create({
         user_id,
         id: req.body.id,
@@ -75,7 +76,7 @@ router.post('/', upload.single('image'), async (req, res) => {
         genre: req.body.genre,
         has_read: req.body.has_read,
         description: req.body.description,
-        image: req.body.image
+        image: bookImage
       });
   
 

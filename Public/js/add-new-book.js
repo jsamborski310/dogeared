@@ -8,7 +8,7 @@ const createNewBook = async (event) => {
     const description = document.querySelector('#form-book-description').value;
     const bookCover = document.querySelector('#form-book-cover').files[0]
 
-    console.log("here are the values",bookTitle , author, genre , readStatus , description,  bookCover);
+    
     let formData = new FormData();
     formData.append('image' , (bookCover));
     formData.append('title' , (bookTitle));
@@ -41,7 +41,7 @@ const createNewBook = async (event) => {
   };
 
 
-// Wrap '.new-book-form' div around New Book Form html
+
 document
   .querySelector('.new-book-form')
   .addEventListener('submit', createNewBook);

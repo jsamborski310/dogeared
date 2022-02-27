@@ -62,6 +62,31 @@ router.post('/', upload.single('image'), async (req, res) => {
       res.status(400).json(err);
     }
   });
+  router.post('/add-existing-book',  async (req, res) => {
+    try {
+      const user_id = req.session.user_id;
+      
+      console.log("body" , req.body);
+      const bookData = await Book.create({
+        user_id,
+        id: req.body.id,
+        title: req.body.title,
+        author: req.body.author,
+        genre: req.body.genre,
+        has_read: req.body.has_read,
+        description: req.body.description,
+        image: req.body.image
+      });
+  
+
+  
+      res.status(200).json(bookData);
+    } catch (err) {
+      res.status(400).json(err);
+    }
+  });
+
+
 
 // PUT update a book
 router.put('/:id', async (req, res) => {

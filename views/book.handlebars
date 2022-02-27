@@ -6,8 +6,8 @@
         <div class="book-details-header d-flex justify-content-between align-items-center">
             <h2>book details</h2>
             <div style="display:inline-block">
-                <a class="outlined-button button-h6" href="#">View Notes</a>
-                <a class="theme-button button-h6" href="#">Add Note</a>
+                <a class="outlined-button button-h6" href="/single-note/{{id}}">View Notes</a>
+                  <a class="theme-button button-h6" href="/add-new-note/{{id}}">Add Note</a>
             </div>
         </div>
         
@@ -38,7 +38,7 @@
 
 {{!-- Create counter. Will have to do a for each. --}}
                             <div style="display:inline-flex; align-items:center;">
-                                <h6 class="notes-counter" style="margin-right:10px;">3</h6>
+                                <h6 class="notes-counter" style="margin-right:10px;">{{noOfNotes}}</h6>
                                 <h6>Notes</h6>
                             </div>
                         </div>

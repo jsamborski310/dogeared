@@ -1,12 +1,12 @@
-const sequelize = require('../config/connection');
-const Book  = require('../models/Book');
-const Notes = require('../models/notes');
+const sequelize = require("../config/connection");
+const Book = require("../models/Book");
+const Notes = require("../models/notes");
 
-const User = require('../models/User');
+const User = require("../models/User");
 
-const bookData = require('./bookData.json');
-const userData = require('./userData.json')
-const notesData = require('./notesData.json')
+const bookData = require("./bookData.json");
+const userData = require("./userData.json");
+const notesData = require("./notesData.json");
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -26,15 +26,7 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-
-
-  
-
-
-
   process.exit(0);
 };
-
-
 
 seedDatabase();

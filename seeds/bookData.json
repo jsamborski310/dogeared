@@ -1,138 +1,134 @@
 [
+    {
+        "id": 1,
+        "title": "Throne of Glass",
+        "author": "Sarah J. Mass",
+        "genre": "Young Adult",
+        "has_read": true,
+        "user_id": 1,
+        "isCommon": true,
+        "image": "http://localhost:3001/images/throne-of-glass.jpg",
+        "description": "After serving out a year of hard labor in the salt mines of Endovier for her crimes, 18-year-old assassin Celaena Sardothien is dragged before the Crown Prince. Prince Dorian offers her her freedom on one condition: she must act as his champion in a competition to find a new royal assassin. Her opponents are men-thieves and assassins and warriors from across the empire, each sponsored by a member of the king's council. If she beats her opponents in a series of eliminations, she'll serve the kingdom for three years and then be granted her freedom. Celaena finds her training sessions with the captain of the guard, Westfall, challenging and exhilirating. But she's bored stiff by court life. Things get a little more interesting when the prince starts to show interest in her... but it's the gruff Captain Westfall who seems to understand her best. Then one of the other contestants turns up dead... quickly followed by another. Can Celaena figure out who the killer is before she becomes a victim? As the young assassin investigates, her search leads her to discover a greater destiny than she could possibly have imagined."
 
-{
-    "id": 1,
-    "title": "Throne of Glass",
-    "author": "Sarah J. Mass",
-    "genre": "Young Adult",
-    "has_read": true,
-    "user_id": 1,
-    "isCommon": true,
-    "image": "http://localhost:3001/images/throne-of-glass.jpg",
-    "description": "After serving out a year of hard labor in the salt mines of Endovier for her crimes, 18-year-old assassin Celaena Sardothien is dragged before the Crown Prince. Prince Dorian offers her her freedom on one condition: she must act as his champion in a competition to find a new royal assassin. Her opponents are men-thieves and assassins and warriors from across the empire, each sponsored by a member of the king's council. If she beats her opponents in a series of eliminations, she'll serve the kingdom for three years and then be granted her freedom. Celaena finds her training sessions with the captain of the guard, Westfall, challenging and exhilirating. But she's bored stiff by court life. Things get a little more interesting when the prince starts to show interest in her... but it's the gruff Captain Westfall who seems to understand her best. Then one of the other contestants turns up dead... quickly followed by another. Can Celaena figure out who the killer is before she becomes a victim? As the young assassin investigates, her search leads her to discover a greater destiny than she could possibly have imagined."
+    },
 
-},
+    {
+        "id": 2,
+        "title": "Foreshadowed",
+        "author": "Holly M. Campbell",
+        "genre": "Mystery",
+        "has_read": false,
+        "user_id": 1,
+        "isCommon": true,
+        "image": "http://localhost:3001/images/foreshadowed.jpg",
+        "description": "Hope Murdoch was born dead. She took a breath two minutes later and now is an almost-normal sixteen-year-old. Normal: a hopeless crush on the boy next door, a negative body image, and a (mis)diagnosis of ADHD. Not-so-normal: an exhausting and distracting ability to read minds. High school is hard enough without hearing what everyone really thinks of you. Lance Hampton used to be normal until a car accident killed him and his parents. Paramedics brought him back to a life he doesn’t want: orphaned, uprooted, living with his uncle, and suddenly able to see how people die. At his new school, he tries to keep to himself. Seeing how complete strangers die is torture enough, let alone friends. At first glance, Hope doesn’t think much of Lance (though a lot of the other girls do). He looks like the typical bad boy. No thank-you…but then she meets his eyes and everything goes dark. She hears labored breathing. Rapid footsteps. And then a thud as someone falls to the ground. Inside Lance’s head, Hope just witnessed a vision of murder…her own. Together, Hope and Lance try to catch a killer before he’s red-handed. A killer who could be anywhere. Anyone. Sure Hope can read minds and Lance can see death, but they still can’t see in the dark."
+        
 
-{
-    "id": 2,
-    "title": "Foreshadowed",
-    "author": "Holly M. Campbell",
-    "genre": "Mystery",
-    "has_read": false,
-    "user_id": 1,
-    "isCommon": true,
-    "image": "http://localhost:3001/images/foreshadowed.jpg",
-    "description": "Hope Murdoch was born dead. She took a breath two minutes later and now is an almost-normal sixteen-year-old. Normal: a hopeless crush on the boy next door, a negative body image, and a (mis)diagnosis of ADHD. Not-so-normal: an exhausting and distracting ability to read minds. High school is hard enough without hearing what everyone really thinks of you. Lance Hampton used to be normal until a car accident killed him and his parents. Paramedics brought him back to a life he doesn’t want: orphaned, uprooted, living with his uncle, and suddenly able to see how people die. At his new school, he tries to keep to himself. Seeing how complete strangers die is torture enough, let alone friends. At first glance, Hope doesn’t think much of Lance (though a lot of the other girls do). He looks like the typical bad boy. No thank-you…but then she meets his eyes and everything goes dark. She hears labored breathing. Rapid footsteps. And then a thud as someone falls to the ground. Inside Lance’s head, Hope just witnessed a vision of murder…her own. Together, Hope and Lance try to catch a killer before he’s red-handed. A killer who could be anywhere. Anyone. Sure Hope can read minds and Lance can see death, but they still can’t see in the dark."
-    
+    },
+    {
+        "id": 3,
+        "title": "Outlander",
+        "author": "Diana Gabaldon",
+        "genre": "Fantasy",
+        "has_read": true,
+        "user_id": 1,
+        "isCommon": true,
+        "image": "http://localhost:3001/images/outlander.jpg",
+        "description": "Scottish Highlands, 1945. Claire Randall, a former British combat nurse, is just back from the war and reunited with her husband on a second honeymoon when she walks through a standing stone in one of the ancient circles that dot the British Isles. Suddenly she is a Sassenach—an “outlander”—in a Scotland torn by war and raiding clans in the year of Our Lord . . . 1743. Claire is catapulted into the intrigues of a world that threatens her life, and may shatter her heart. Marooned amid danger, passion, and violence, Claire learns her only chance of safety lies in Jamie Fraser, a gallant young Scots warrior. What begins in compulsion becomes urgent need, and Claire finds herself torn between two very different men, in two irreconcilable lives."
 
-},
-{
-    "id": 3,
-    "title": "Outlander",
-    "author": "Diana Gabaldon",
-    "genre": "Fantasy",
-    "has_read": true,
-    "user_id": 1,
-    "isCommon": true,
-    "image": "http://localhost:3001/images/outlander.jpg",
-    "description": "Scottish Highlands, 1945. Claire Randall, a former British combat nurse, is just back from the war and reunited with her husband on a second honeymoon when she walks through a standing stone in one of the ancient circles that dot the British Isles. Suddenly she is a Sassenach—an “outlander”—in a Scotland torn by war and raiding clans in the year of Our Lord . . . 1743. Claire is catapulted into the intrigues of a world that threatens her life, and may shatter her heart. Marooned amid danger, passion, and violence, Claire learns her only chance of safety lies in Jamie Fraser, a gallant young Scots warrior. What begins in compulsion becomes urgent need, and Claire finds herself torn between two very different men, in two irreconcilable lives."
+    },
 
-},
+    {
+        "id": 4,
+        "title": "A Game of Thrones",
+        "author": "George R.R. Martin",
+        "genre": "Fantasy",
+        "has_read": false,
+        "user_id": 1,
+        "isCommon": true,
+        "image": "http://localhost:3001/images/game-of-thrones.jpg",
+        "description": "Winter is coming. Such is the stern motto of House Stark, the northernmost of the fiefdoms that owe allegiance to King Robert Baratheon in far-off King’s Landing. There Eddard Stark of Winterfell rules in Robert’s name. There his family dwells in peace and comfort: his proud wife, Catelyn; his sons Robb, Brandon, and Rickon; his daughters Sansa and Arya; and his bastard son, Jon Snow. Far to the north, behind the towering Wall, lie savage Wildings and worse—unnatural things relegated to myth during the centuries-long summer, but proving all too real and all too deadly in the turning of the season. Yet a more immediate threat lurks to the south, where Jon Arryn, the Hand of the King, has died under mysterious circumstances. Now Robert is riding north to Winterfell, bringing his queen, the lovely but cold Cersei, his son, the cruel, vainglorious Prince Joffrey, and the queen’s brothers Jaime and Tyrion of the powerful and wealthy House Lannister—the first a swordsman without equal, the second a dwarf whose stunted stature belies a brilliant mind. All are heading for Winterfell and a fateful encounter that will change the course of kingdoms. Meanwhile, across the Narrow Sea, Prince Viserys, heir of the fallen House Targaryen, which once ruled all of Westeros, schemes to reclaim the throne with an army of barbarian Dothraki—whose loyalty he will purchase in the only coin left to him: his beautiful yet innocent sister, Daenerys." 
 
-{
-    "id": 4,
-    "title": "A Game of Thrones",
-    "author": "George R.R. Martin",
-    "genre": "Fantasy",
-    "has_read": false,
-    "user_id": 1,
-    "isCommon": true,
-    "image": "http://localhost:3001/images/game-of-thrones.jpg",
-    "description": "Winter is coming. Such is the stern motto of House Stark, the northernmost of the fiefdoms that owe allegiance to King Robert Baratheon in far-off King’s Landing. There Eddard Stark of Winterfell rules in Robert’s name. There his family dwells in peace and comfort: his proud wife, Catelyn; his sons Robb, Brandon, and Rickon; his daughters Sansa and Arya; and his bastard son, Jon Snow. Far to the north, behind the towering Wall, lie savage Wildings and worse—unnatural things relegated to myth during the centuries-long summer, but proving all too real and all too deadly in the turning of the season. Yet a more immediate threat lurks to the south, where Jon Arryn, the Hand of the King, has died under mysterious circumstances. Now Robert is riding north to Winterfell, bringing his queen, the lovely but cold Cersei, his son, the cruel, vainglorious Prince Joffrey, and the queen’s brothers Jaime and Tyrion of the powerful and wealthy House Lannister—the first a swordsman without equal, the second a dwarf whose stunted stature belies a brilliant mind. All are heading for Winterfell and a fateful encounter that will change the course of kingdoms. Meanwhile, across the Narrow Sea, Prince Viserys, heir of the fallen House Targaryen, which once ruled all of Westeros, schemes to reclaim the throne with an army of barbarian Dothraki—whose loyalty he will purchase in the only coin left to him: his beautiful yet innocent sister, Daenerys."
-    
+    },
+    {
+        "id": 5,
+        "title": "The Hate U Give",
+        "author": "Angie Thomas",
+        "genre": "Young Adult",
+        "has_read": true,
+        "user_id": 1,
+        "isCommon": true,
+        "image": "http://localhost:3001/images/the-hate-u-give.jpg",
+        "description": "Sixteen-year-old Starr Carter moves between two worlds: the poor neighborhood where she lives and the fancy suburban prep school she attends. The uneasy balance between these worlds is shattered when Starr witnesses the fatal shooting of her childhood best friend Khalil at the hands of a police officer. Khalil was unarmed. Soon afterward, his death is a national headline. Some are calling him a thug, maybe even a drug dealer and a gangbanger. Protesters are taking to the streets in Khalil’s name. Some cops and the local drug lord try to intimidate Starr and her family. What everyone wants to know is: what really went down that night? And the only person alive who can answer that is Starr. But what Starr does—or does not—say could upend her community. It could also endanger her life."
 
-},
-{
-    "id": 5,
-    "title": "The Hate U Give",
-    "author": "Angie Thomas",
-    "genre": "Young Adult",
-    "has_read": true,
-    "user_id": 1,
-    "isCommon": true,
-    "image": "http://localhost:3001/images/the-hate-u-give.jpg",
-    "description": "Sixteen-year-old Starr Carter moves between two worlds: the poor neighborhood where she lives and the fancy suburban prep school she attends. The uneasy balance between these worlds is shattered when Starr witnesses the fatal shooting of her childhood best friend Khalil at the hands of a police officer. Khalil was unarmed. Soon afterward, his death is a national headline. Some are calling him a thug, maybe even a drug dealer and a gangbanger. Protesters are taking to the streets in Khalil’s name. Some cops and the local drug lord try to intimidate Starr and her family. What everyone wants to know is: what really went down that night? And the only person alive who can answer that is Starr. But what Starr does—or does not—say could upend her community. It could also endanger her life."
+    },
 
-},
+    {
+        "id": 6,
+        "title": "Iron Widow",
+        "author": "Xiran Jay Zhao",
+        "genre": "Fantasy",
+        "has_read": false,
+        "user_id": 1,
+        "isCommon": true,
+        "image": "http://localhost:3001/images/iron-widow.jpg",
+        "description": "The boys of Huaxia dream of pairing up with girls to pilot Chrysalises, giant transforming robots that can battle the mecha aliens that lurk beyond the Great Wall. It doesn't matter that the girls often die from the mental strain. When 18-year-old Zetian offers herself up as a concubine-pilot, it's to assassinate the ace male pilot responsible for her sister's death. But she gets her vengeance in a way nobody expected—she kills him through the psychic link between pilots and emerges from the cockpit unscathed. She is labeled an Iron Widow, a much-feared and much-silenced kind of female pilot who can sacrifice boys to power up Chrysalises instead.​ To tame her unnerving yet invaluable mental strength, she is paired up with Li Shimin, the strongest and most controversial male pilot in Huaxia​. But now that Zetian has had a taste of power, she will not cower so easily. She will miss no opportunity to leverage their combined might and infamy to survive attempt after attempt on her life, until she can figure out exactly why the pilot system works in its misogynist way—and stop more girls from being sacrificed."
+        
 
-{
-    "id": 6,
-    "title": "Iron Widow",
-    "author": "Xiran Jay Zhao",
-    "genre": "Fantasy",
-    "has_read": false,
-    "user_id": 1,
-    "isCommon": true,
-    "image": "http://localhost:3001/images/iron-widow.jpg",
-    "description": "The boys of Huaxia dream of pairing up with girls to pilot Chrysalises, giant transforming robots that can battle the mecha aliens that lurk beyond the Great Wall. It doesn't matter that the girls often die from the mental strain. When 18-year-old Zetian offers herself up as a concubine-pilot, it's to assassinate the ace male pilot responsible for her sister's death. But she gets her vengeance in a way nobody expected—she kills him through the psychic link between pilots and emerges from the cockpit unscathed. She is labeled an Iron Widow, a much-feared and much-silenced kind of female pilot who can sacrifice boys to power up Chrysalises instead.​ To tame her unnerving yet invaluable mental strength, she is paired up with Li Shimin, the strongest and most controversial male pilot in Huaxia​. But now that Zetian has had a taste of power, she will not cower so easily. She will miss no opportunity to leverage their combined might and infamy to survive attempt after attempt on her life, until she can figure out exactly why the pilot system works in its misogynist way—and stop more girls from being sacrificed."
-    
+    },
 
-},
+    {
+        "id": 7,
+        "title": "The Handmaid's Tale",
+        "author": "Margaret Atwood",
+        "genre": "Dystopian",
+        "has_read": true,
+        "user_id": 1,
+        "isCommon": true,
+        "image": "http://localhost:3001/images/the-handmaids-tale.jpg",
+        "description": "The Handmaid's Tale is a novel of such power that the reader will be unable to forget its images and its forecast. Set in the near future, it describes life in what was once the United States and is now called the Republic of Gilead, a monotheocracy that has reacted to social unrest and a sharply declining birthrate by reverting to, and going beyond, the repressive intolerance of the original Puritans. The regime takes the Book of Genesis absolutely at its word, with bizarre consequences for the women and men in its population. The story is told through the eyes of Offred, one of the unfortunate Handmaids under the new social order. In condensed but eloquent prose, by turns cool-eyed, tender, despairing, passionate, and wry, she reveals to us the dark corners behind the establishment’s calm facade, as certain tendencies now in existence are carried to their logical conclusions. The Handmaid's Tale is funny, unexpected, horrifying, and altogether convincing. It is at once scathing satire, dire warning, and a tour de force. It is Margaret Atwood at her best."
 
-{
-    "id": 7,
-    "title": "The Handmaid's Tale",
-    "author": "Margaret Atwood",
-    "genre": "Dystopian",
-    "has_read": true,
-    "user_id": 1,
-    "isCommon": true,
-    "image": "http://localhost:3001/images/the-handmaids-tale.jpg",
-    "description": "The Handmaid's Tale is a novel of such power that the reader will be unable to forget its images and its forecast. Set in the near future, it describes life in what was once the United States and is now called the Republic of Gilead, a monotheocracy that has reacted to social unrest and a sharply declining birthrate by reverting to, and going beyond, the repressive intolerance of the original Puritans. The regime takes the Book of Genesis absolutely at its word, with bizarre consequences for the women and men in its population. The story is told through the eyes of Offred, one of the unfortunate Handmaids under the new social order. In condensed but eloquent prose, by turns cool-eyed, tender, despairing, passionate, and wry, she reveals to us the dark corners behind the establishment’s calm facade, as certain tendencies now in existence are carried to their logical conclusions. The Handmaid's Tale is funny, unexpected, horrifying, and altogether convincing. It is at once scathing satire, dire warning, and a tour de force. It is Margaret Atwood at her best."
+    },
 
-},
+    {
+        "id": 8,
+        "title": "Harry Potter and the Sorcerer's Stone",
+        "author": "J.K. Rowling",
+        "genre": "Fantasy",
+        "has_read": false,
+        "user_id": 1,
+        "isCommon": true,
+        "image": "http://localhost:3001/images/harry-potter.jpg",
+        "description": "Harry Potter has no idea how famous he is. That's because he's being raised by his miserable aunt and uncle who are terrified Harry will learn that he's really a wizard, just as his parents were. But everything changes when Harry is summoned to attend an infamous school for wizards, and he begins to discover some clues about his illustrious birthright. From the surprising way he is greeted by a lovable giant, to the unique curriculum and colorful faculty at his unusual school, Harry finds himself drawn deep inside a mystical world he never knew existed and closer to his own noble destiny."
+        
 
-{
-    "id": 8,
-    "title": "Harry Potter and the Sorcerer's Stone",
-    "author": "J.K. Rowling",
-    "genre": "Fantasy",
-    "has_read": false,
-    "user_id": 1,
-    "isCommon": true,
-    "image": "http://localhost:3001/images/harry-potter.jpg",
-    "description": "Harry Potter has no idea how famous he is. That's because he's being raised by his miserable aunt and uncle who are terrified Harry will learn that he's really a wizard, just as his parents were. But everything changes when Harry is summoned to attend an infamous school for wizards, and he begins to discover some clues about his illustrious birthright. From the surprising way he is greeted by a lovable giant, to the unique curriculum and colorful faculty at his unusual school, Harry finds himself drawn deep inside a mystical world he never knew existed and closer to his own noble destiny."
-    
+    },
 
-},
+    {
+        "id": 9,
+        "title": "Dune",
+        "author": "Frank Herbert",
+        "genre": "Science Fiction",
+        "has_read": true,
+        "user_id": 1,
+        "isCommon": true,
+        "image": "http://localhost:3001/images/dune.jpg",
+        "description": "Set on the desert planet Arrakis, Dune is the story of the boy Paul Atreides, heir to a noble family tasked with ruling an inhospitable world where the only thing of value is the “spice” melange, a drug capable of extending life and enhancing consciousness. Coveted across the known universe, melange is a prize worth killing for....When House Atreides is betrayed, the destruction of Paul’s family will set the boy on a journey toward a destiny greater than he could ever have imagined. And as he evolves into the mysterious man known as Muad’Dib, he will bring to fruition humankind’s most ancient and unattainable dream. A stunning blend of adventure and mysticism, environmentalism and politics, Dune won the first Nebula Award, shared the Hugo Award, and formed the basis of what is undoubtedly the grandest epic in science fiction."
 
-{
-    "id": 9,
-    "title": "Dune",
-    "author": "Frank Herbert",
-    "genre": "Science Fiction",
-    "has_read": true,
-    "user_id": 1,
-    "isCommon": true,
-    "image": "http://localhost:3001/images/dune.jpg",
-    "description": "Set on the desert planet Arrakis, Dune is the story of the boy Paul Atreides, heir to a noble family tasked with ruling an inhospitable world where the only thing of value is the “spice” melange, a drug capable of extending life and enhancing consciousness. Coveted across the known universe, melange is a prize worth killing for....When House Atreides is betrayed, the destruction of Paul’s family will set the boy on a journey toward a destiny greater than he could ever have imagined. And as he evolves into the mysterious man known as Muad’Dib, he will bring to fruition humankind’s most ancient and unattainable dream. A stunning blend of adventure and mysticism, environmentalism and politics, Dune won the first Nebula Award, shared the Hugo Award, and formed the basis of what is undoubtedly the grandest epic in science fiction."
+    },
 
-},
+    {
+        "id": 10,
+        "title": "It Ends With Us",
+        "author": "Colleen Hoover",
+        "genre": "Romance",
+        "has_read": false,
+        "user_id": 1,
+        "isCommon": true,
+        "image": "http://localhost:3001/images/it-ends-with-us.jpg",
+        "description": "Lily hasn’t always had it easy, but that’s never stopped her from working hard for the life she wants. She’s come a long way from the small town where she grew up—she graduated from college, moved to Boston, and started her own business. And when she feels a spark with a gorgeous neurosurgeon named Ryle Kincaid, everything in Lily’s life seems too good to be true. Ryle is assertive, stubborn, maybe even a little arrogant. He’s also sensitive, brilliant, and has a total soft spot for Lily. And the way he looks in scrubs certainly doesn’t hurt. Lily can’t get him out of her head. But Ryle’s complete aversion to relationships is disturbing. Even as Lily finds herself becoming the exception to his “no dating” rule, she can’t help but wonder what made him that way in the first place. As questions about her new relationship overwhelm her, so do thoughts of Atlas Corrigan—her first love and a link to the past she left behind. He was her kindred spirit, her protector. When Atlas suddenly reappears, everything Lily has built with Ryle is threatened."
+        
 
-{
-    "id": 10,
-    "title": "It Ends With Us",
-    "author": "Colleen Hoover",
-    "genre": "Romance",
-    "has_read": false,
-    "user_id": 1,
-    "isCommon": true,
-    "image": "http://localhost:3001/images/it-ends-with-us.jpg",
-    "description": "Lily hasn’t always had it easy, but that’s never stopped her from working hard for the life she wants. She’s come a long way from the small town where she grew up—she graduated from college, moved to Boston, and started her own business. And when she feels a spark with a gorgeous neurosurgeon named Ryle Kincaid, everything in Lily’s life seems too good to be true. Ryle is assertive, stubborn, maybe even a little arrogant. He’s also sensitive, brilliant, and has a total soft spot for Lily. And the way he looks in scrubs certainly doesn’t hurt. Lily can’t get him out of her head. But Ryle’s complete aversion to relationships is disturbing. Even as Lily finds herself becoming the exception to his “no dating” rule, she can’t help but wonder what made him that way in the first place. As questions about her new relationship overwhelm her, so do thoughts of Atlas Corrigan—her first love and a link to the past she left behind. He was her kindred spirit, her protector. When Atlas suddenly reappears, everything Lily has built with Ryle is threatened."
-    
-
-}
-
-
+    }
 
 ]

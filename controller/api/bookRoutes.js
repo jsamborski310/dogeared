@@ -88,7 +88,7 @@ router.post('/', upload.single('image'), async (req, res) => {
 
 
 
-// PUT update a book
+// UPDATE a book
 router.put('/:id', async (req, res) => {
     try {
       const bookData = await Book.update(req.body, {
@@ -112,7 +112,6 @@ router.delete('/:id', withAuth, async (req, res) => {
     const bookData = await Book.destroy({
       where: {
         id: req.params.id,
-        // user_id: req.session.user_id,
       },
     });
 

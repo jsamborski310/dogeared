@@ -11,26 +11,24 @@
 
         {{!-- Displays each recommended book. --}}
         {{#each books as |book| }}
-        <div class="add-book-card">
-            <div style="position:relative;">
-                <button type="submit" class="add-book-button">
-                    <p class="add-book-icon" onclick="onBookAdd({{json book}})">+</p>
-                    <img class="book-cover" src="{{book.image}}" alt="{{book.title}}" width="125px" height="187px" />
-                </button>
+            <div class="add-book-card">
+                <div style="position:relative;">
+                    <button type="submit" class="add-book-button">
+                        <p class="add-book-icon" onclick="onBookAdd({{json book}})">+</p>
+                        <img class="book-cover" src="{{book.image}}" alt="{{book.title}}" width="125px" height="187px" />
+                    </button>
+                </div>
             </div>
-        </div>
-
         {{/each}}
-
     </div>
 </div>
-</div>
+
 
 <div style="text-align:center; margin: 40px 0">
     <button id="myButton" class="theme-button button-h6">Next</button>
 </div>
 
-
+{{!-- SCRIPT TO ADD SELECTED BOOKS TO THE USER LIBRARY --}}
 <script>
     document.getElementById("myButton").onclick = function () {
         window.location.href = "/add-new-book"
@@ -46,8 +44,6 @@
                     'Accept': 'application/json, text/plain, */*',
                     'Content-Type': 'application/json'
                 },
-
-
             });
 
             if (response.ok) {

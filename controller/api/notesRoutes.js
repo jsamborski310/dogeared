@@ -4,10 +4,14 @@ const { Notes } = require('../../models');
 
 
 
-router.get('/', async (req, res) => {
+router.get('/:book_id', async (req, res) => {
     try {
       const notesData = await Notes.findAll(
-        req.body
+        {
+          where : {
+            book_id : req.params.book_id
+          }
+        }
   );
   
       console.log(notesData)
@@ -17,36 +21,31 @@ router.get('/', async (req, res) => {
     }
   });
 
-router.get('/:id', async (req, res) => {
-    try {
-      const notesData = await Notes.findByPk(req.params.id, {
+// router.get('/:id', async (req, res) => {
+//     try {
+//       const notesData = await Notes.findByPk(req.params.id, {
         
-      });
+//       });
   
-      if (!notesData) {
-        res.status(404).json({ message: 'No notes found' });
-        return;
-      }
+//       if (!notesData) {
+//         res.status(404).json({ message: 'No notes found' });
+//         return;
+//       }
   
-      res.status(200).json(notesData);
-    } catch (err) {
-      res.status(500).json(err)
-    }
-  });
+//       res.status(200).json(notesData);
+//     } catch (err) {
+//       res.status(500).json(err)
+//     }
+//   });
 
 
 
 router.post('/', async (req, res) => {
     try {
-      const book_id = req.session.book_id;
-      console.log("req" , req.user ,)
-      
-      
+        
+     
       const notesData = await Notes.create({
-        book_id,
-        id: req.body.id,
-        title: req.body.title,
-        description: req.body.description,
+    ...req.body
       
       
       });
@@ -55,6 +54,7 @@ router.post('/', async (req, res) => {
   
       res.status(200).json(notesData);
     } catch (err) {
+      console.log(err);
       res.status(400).json(err);
     }
   });

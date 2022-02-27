@@ -1,40 +1,42 @@
+
+
+
 const createNewNote = async (event) => {
-    event.preventDefault();
-    
-    const noteTitle = document.querySelector('#form-note-title').value.trim();
-    const noteDescription = document.querySelector('#form-note-details').value.trim();
+  event.preventDefault();
+
+  const title = document.querySelector('#form-note-title').value.trim();
+  const description = document.querySelector('#form-note-details').value.trim();
+
+  const book_id = document.getElementById('form_submit_btn').value;
+  console.log("fields", title, description, book_id);
+  const body = {
+    title,
+    description,
+    book_id
+  }
+
+  if (title && description && book_id) {
 
 
-    
-    let formData = new FormData();
-    formData.append('title' , (noteTitle));
-    formData.append('description' , (noteDescription));
-    if (noteTitle && noteDescription) {
-      
-      const response = await fetch(`/api/notes`, {
-        method: 'POST',
-        body: formData,
+    const response = await fetch(`/api/notes`, {
+      method: 'POST',
+      body: JSON.stringify(body),
 
-        mode: "no-cors",
-              cache: "no-cache",
-              credentials: "same-origin",
-              headers: {
-                "Content-Type": "form-data"
-              },
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
 
-        // This may need edit?
-        // headers: {
-        //   'Content-Type': 'multipart/form-data',
-        // },
-      });
-  
-      if (response.ok) {
-        document.location.replace('/');
-      } else {
-        alert('Failed to add new note! Please complete all fields.');
-      }
+
+    });
+
+    if (response.ok) {
+      document.location.reload();
+    } else {
+      alert('Failed to add new note! Please complete all fields.');
     }
-  };
+  }
+};
 
 
 // Option to delete book
@@ -54,11 +56,24 @@ const deleteNote = async (event) => {
   }
 };
 
+// const fetchNotesAndRender = async () => {
+//   try{
+//     const book_id = document.getElementsByTagName('script')[0].classList[0];    
+//     const response = await fetch(`/api/notes/${book_id}`);
+//     console.log(await response.json());
+//   }
+//   catch(err){
+//     console.err(err);
+//   }
+// }
+
 
 document
   .querySelector('.new-note-form')
   .addEventListener('submit', createNewNote);
 
 
-
+// document.addEventListener('DOMContentLoaded', function () {
+//   fetchNotesAndRender();
+// })
 

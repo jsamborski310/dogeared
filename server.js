@@ -5,6 +5,7 @@ const session = require('express-session');
 const routes = require('./controller');
 const helpers = require('./utils/helpers');
 const sequelize = require('./config/connection');
+
 const hbs = exphbs.create({ helpers, layoutsDir: 'views/layout' });
 
 // const fileUpload = require('express-fileupload');

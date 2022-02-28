@@ -1,9 +1,8 @@
 const router = require('express').Router();
-
 const { Notes } = require('../../models');
 
 
-
+// GET all notes for a specific book.
 router.get('/:book_id', async (req, res) => {
     try {
       const notesData = await Notes.findAll(
@@ -21,37 +20,16 @@ router.get('/:book_id', async (req, res) => {
     }
   });
 
-// router.get('/:id', async (req, res) => {
-//     try {
-//       const notesData = await Notes.findByPk(req.params.id, {
-        
-//       });
-  
-//       if (!notesData) {
-//         res.status(404).json({ message: 'No notes found' });
-//         return;
-//       }
-  
-//       res.status(200).json(notesData);
-//     } catch (err) {
-//       res.status(500).json(err)
-//     }
-//   });
 
-
-
+// CREATE a new note for a specific book.
 router.post('/', async (req, res) => {
     try {
         
-     
       const notesData = await Notes.create({
     ...req.body
       
-      
       });
-  
 
-  
       res.status(200).json(notesData);
     } catch (err) {
       console.log(err);
@@ -60,7 +38,7 @@ router.post('/', async (req, res) => {
   });
 
 
-
+// UPDATE a note for a specific book.
 router.put('/:id', async (req, res) => {
     try {
       const notesData = await Notes.update(req.body, {
@@ -78,7 +56,7 @@ router.put('/:id', async (req, res) => {
     }
   });
 
-
+// DELETE note for a specific book.
 router.delete('/:id', async (req, res) => {
   try {
     const notesData = await Notes.destroy({

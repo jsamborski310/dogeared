@@ -1,83 +1,86 @@
 <div class="container px-5">
 
-    <div class="row mb-5">
-        <div class="book-details-header d-flex justify-content-between align-items-center">
+  {{! HEADER }}
+  <div class="row mb-5">
+    <div
+      class="book-details-header d-flex justify-content-between align-items-center"
+    >
 
+      <div class="d-flex align-items-center justify-content-start note-header">
+        <a href="/book/{{book.id}}">
+          <img
+            class="book-cover"
+            src="{{book.image}}"
+            alt="{{book.title}}"
+            width="100px"
+            height="150px"
+          />
+        </a>
 
-            <div class="d-flex align-items-center justify-content-start note-header">
-                <img class="book-cover" src="{{book.image}}" alt="{{book.title}}" width="100px" height="150px"/>
-            
-                <div class="note-book-details">
-                    <h2>{{book.title}}</h2>
-                    <h3 style="text-transform: capitalize;" >{{book.author}}</h3>
-                </div>
-            </div>
-
-
-            <div style="display:inline-block">
-                <a class="outlined-button button-h6" href="/book/{{book.id}}">View Book</a>
-                <a class="theme-button button-h6" href="/add-new-note/{{book.id}}">Add Note</a>
-            </div>
+        <div class="note-book-details">
+          <h2>{{book.title}}</h2>
+          <h3 style="text-transform: capitalize;">{{book.author}}</h3>
         </div>
+      </div>
+
+      <div style="display:inline-block">
+        <a class="outlined-button button-h6" href="/book/{{book.id}}">View Book</a>
+        <a class="theme-button button-h6" href="/add-new-note/{{book.id}}">Add
+          Note</a>
+      </div>
+    </div>
+
+  </div>
+
+  {{! MAIN CONTENT }}
+  <div class="row align-items-start g-5">
+    <div
+      class="col-lg-4 order-lg-1 col-md-5 order-md-1 col-sm-12 order-sm-2 col-12 order-2"
+    >
+
+      <!-- LEFT SIDE. SIDEBAR. -->
+      <div class="sidebar">
+
+        {{#each notes as |note|}}
+
+          <div class="row mb-3" onclick="onNoteSelection({{json this}})">
+            <div class="d-flex align-items-center mb-4">
+
+              <div style="width:75%;">
+                <h4 class="mb-1">{{note.title}}</h4>
+                <p class="mb-0 note-description">{{note.description}}</p>
+              </div>
+
+              {{! PLACE HOLDER FOR FUTURE DELETE BUTTON. }}
+              {{! <div class="delete-note" style="width:25%; text-align:center;">
+                            <img class="book-cover" src="/assets/delete-notes.png" alt="Minus Icon" width="25px" height="auto"/>
+                        </div> }}
+            </div>
+          </div>
+          <hr style="width:90%;" />
+        {{/each}}
+
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE.  -->
+    <div
+      class="col-lg-8 order-lg-2 col-md-7 order-md-2 col-sm-12 order-sm-1 col-12 order-1"
+    >
+
+      <!-- NOTE TITLE  -->
+      <h2
+        id="note-title"
+        class="note-title-heading"
+        style="margin-bottom:20px;"
+      >{{note.title}}</h2>
+
+      <!-- DESCRIPTION -->
+      <p id="note-description">{{note.description}}</p>
 
     </div>
 
-
-
-    <div class="row align-items-start g-5">
-        <div class="col-lg-4 order-lg-1 col-md-5 order-md-1 col-sm-12 order-sm-2 col-12 order-2">
-
-            <!-- LEFT SIDE. SIDEBAR. -->
-            <div class="sidebar">
-
-                <!-- THIS IS THE DYNAMIC SECTION. -->
-                
-                   {{#each notes as |note| }}
-                
-                <div class="row mb-3"  onclick="onNoteSelection({{json this}})">
-                    <div class="d-flex align-items-center mb-4">
-                
-                        <div style="width:75%;">
-                            <h4 class="mb-1">{{note.title}}</h4>
-                            <p class="mb-0 note-description">{{note.description}}</p>
-                        </div>
-
-                        <div class="delete-note" style="width:25%; text-align:center;">
-                            <img class="book-cover" src="/assets/delete-notes.png" alt="Minus Icon" width="25px" height="auto"/>
-                        </div>
-                    </div>
-                </div>
-                <hr style="width:90%;"/>
-                    {{/each}}  
-                <!-- ENDS HERE -->
-
-
-
-
-
-            
-
-            </div>
-        </div>
-
-
-    <!-- RIGHT SIDE.  -->
-        <div class="col-lg-8 order-lg-2 col-md-7 order-md-2 col-sm-12 order-sm-1 col-12 order-1">
-
-            <!-- NOTE TITLE  -->
-            
-            <h2 id="note-title" class ="note-title-heading" style="margin-bottom:20px;"></h2>
-            
-
-            <!-- DESCRIPTION -->
-            <p id="note-description"></p>
-           
-        </div> 
-
-
-    </div>  
+  </div>
 </div>
 
-
-
- <script src="../js/single-note.js"></script>
+<script src="../js/single-note.js"></script>

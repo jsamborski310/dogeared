@@ -1,39 +1,44 @@
+<div>
+  <h2 style="text-align:center; padding-bottom:30px;">Login</h2>
 
-              <div>
-                <h2 style="text-align:center; padding-bottom:30px;">Login</h2>
+  {{! Form Section }}
 
-                {{!-- Form Section --}}
-               
-                <form class="form login-form">
+  <form class="form login-form">
 
-                    <!-- Username -->
+    <!-- Username -->
+    <div class="form-group" style="margin-bottom:20px;">
+      <label for=" username-login" class="form-label-h6">Username</label>
 
-                    <div class="form-group" style="margin-bottom:20px;">
-                        <label for=" username-login" class="form-label-h6">Username</label>
+      <input
+        type="text"
+        id="username-login"
+        class="form-control"
+        aria-label="Username"
+      />
+    </div>
 
-                        <input type="text" id="username-login" class="form-control"
-                            aria-label="Username">
-                    </div>
+    <!-- Password -->
+    <div class="form-group">
+      <label for="password-login" class="form-label-h6">Password</label>
+      <input type="password" id="password-login" class="form-control" />
+    </div>
 
-                    <!-- Password -->
-                    <div class="form-group">
-                        <label for="password-login" class="form-label-h6">Password</label>
-                        <input type="password" id="password-login" class="form-control">
-                    </div>      
+    <!-- Login Button -->
+    <div class="form-group d-grid gap-2 mt-5">
+      <button
+        type="submit"
+        class="button-h6 login-button-registration"
+      >Login</button>
+    </div>
 
-                    <!-- Login Button -->
+  </form>
 
-                    <div class="form-group d-grid gap-2 mt-5 ">
-                       
-                        <button type="submit" class="button-h6 login-button-registration">Login</button>
+  <!-- Registration Button -->
+  <a
+    href="/register"
+    class="d-grid button-h6 register-button-login"
+  >Register</a>
 
-                    </div>
+</div>
 
-                </form>
-
-                <!-- Registration Button -->
-                <a href="/register" class="d-grid button-h6 register-button-login">Register</a>
-
-          </div>
-
-        <script src="./js/login.js"></script>
+<script src="./js/login.js"></script>

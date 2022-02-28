@@ -1,90 +1,108 @@
+<div class="container row px-5">
 
-    <div class="container row px-5">
+  <!-- LEFT SIDE. BOOK DETAILS OVERVIEW -->
 
-        <!-- LEFT SIDE. BOOK DETAILS OVERVIEW -->
+  <div
+    class="book-details-header d-flex justify-content-between align-items-center"
+  >
+    <h2>Book Details</h2>
+    <div style="display:inline-block">
+      <a class="outlined-button button-h6" href="/book-notes/{{id}}">View Notes</a>
+      <a class="theme-button button-h6" href="/add-new-note/{{id}}">Add Note</a>
+    </div>
+  </div>
 
-        <div class="book-details-header d-flex justify-content-between align-items-center">
-            <h2>book details</h2>
-            <div style="display:inline-block">
-                <a class="outlined-button button-h6" href="/single-note/{{id}}">View Notes</a>
-                  <a class="theme-button button-h6" href="/add-new-note/{{id}}">Add Note</a>
+  <!-- LEFT SIDE. BOOK ACTIONS. -->
+
+  <div class="row align-items-start g-3">
+    <div class="col-lg-4 col-md-5 col-sm-12 col-12">
+      <div class="book-details-sidebar">
+
+        <div>
+          {{! BOOK COVER }}
+          <img
+            class="book-cover"
+            src="{{image}}"
+            alt="Throne of Glass cover"
+            width="200px"
+            height="300"
+          />
+
+          <div class="details-book-cover" style="margin-top:40px;">
+
+            {{! EDIT BOOK BUTTON }}
+            <a href="/book/edit/{{id}}">
+              <h6><img
+                  src="/assets/edit.png"
+                  style="margin-right:10px; width:35px; height:auto;"
+                  alt="pencil icon"
+                />Edit</h6>
+            </a>
+
+            {{! DELETE BOOK BUTTON }}
+            <button class="delete-button" data-id="{{id}}">
+              <h6><img
+                  src="/assets/delete.png"
+                  style="margin-right:6px; width:35px; height:auto;"
+                  alt="minus icon"
+                />
+                Delete</h6>
+            </button>
+
+            <hr style="width:60%" />
+
+            {{! NOTE COUNTER }}
+            <div style="display:inline-flex; align-items:center;">
+              <h6
+                class="notes-counter"
+                style="margin-right:10px;"
+              >{{noOfNotes}}</h6>
+              <h6>Notes</h6>
             </div>
+          </div>
+
         </div>
-        
-
-        <!-- LEFT SIDE. BOOK ACTIONS. -->
-        
-        <div class="row align-items-start g-3">
-
-            <div class="col-lg-4 col-md-5 col-sm-12 col-12">
-
-                <div class="book-details-sidebar">
-                    <div>
-                                  
-                        <img src="{{image}}" alt="Throne of Glass cover" width="200px" height="300"/>
-
-                        <div class="details-book-cover" style="margin-top:40px;">
-
-                            <a href="/book/edit/{{id}}">
-                                <h6><img src="/assets/edit.png" style="margin-right:10px; width:35px; height:auto;" alt="pencil icon"/>Edit</h6>
-                            </a>  
-        
-                            <button class="delete-button" data-id="{{id}}">
-                                <h6><img src="/assets/delete.png" style="margin-right:6px; width:35px; height:auto;" alt="minus icon"/> Delete</h6> 
-                            </button>
-
-                            <hr style="width:60%"/>
-
-
-{{!-- Create counter. Will have to do a for each. --}}
-                            <div style="display:inline-flex; align-items:center;">
-                                <h6 class="notes-counter" style="margin-right:10px;">{{noOfNotes}}</h6>
-                                <h6>Notes</h6>
-                            </div>
-                        </div>
-                                    
-                    </div>
-                </div>
-            </div>
-            
+      </div>
+    </div>
 
     <!-- RIGHT SIDE -->
 
-        <div class="col-lg-8 order-lg-2 col-md-7 order-md-2 col-sm-12 order-sm-1 col-12 order-1">
-            
-                    <!-- Title Input -->
-                    <div class="book-info">
-                        <h6>Title</h6>
-                        <hr class="section-divider-book-details"/>
-                        <p>{{title}}</p>
-                    </div>
+    <div
+      class="col-lg-8 order-lg-2 col-md-7 order-md-2 col-sm-12 order-sm-1 col-12 order-1"
+    >
 
-                    <!-- Author Input -->
-                    <div class="book-info">
-                        <h6>Author</h6>
-                        <hr class="section-divider-book-details"/>
-                        <p>{{author}}</p>
-                    </div>
+      <!-- Title Input -->
+      <div class="book-info">
+        <h6>Title</h6>
+        <hr class="section-divider-book-details" />
+        <p>{{title}}</p>
+      </div>
 
-                    <!-- Genre Input -->
-                    <div class="book-info">
-                        <h6>Genre</h6>
-                        <hr class="section-divider-book-details"/>
-                        <p>{{genre}}</p>
-                    </div>
+      <!-- Author Input -->
+      <div class="book-info">
+        <h6>Author</h6>
+        <hr class="section-divider-book-details" />
+        <p>{{author}}</p>
+      </div>
 
-                    <!-- Description -->
+      <!-- Genre Input -->
+      <div class="book-info">
+        <h6>Genre</h6>
+        <hr class="section-divider-book-details" />
+        <p>{{genre}}</p>
+      </div>
 
-                    <div class="book-info">
-                        <h6>Book Description</h6>
-                        <hr class="section-divider-book-details"/>
-                        <p>{{description}}</p>
-                    </div>
+      <!-- Description -->
 
+      <div class="book-info">
+        <h6>Book Description</h6>
+        <hr class="section-divider-book-details" />
+        <p>{{description}}</p>
+      </div>
 
-            </div>
-        
-        </div>
     </div>
 
-  <script src="/js/delete-book.js"></script>
+  </div>
+</div>
+
+<script src="/js/delete-book.js"></script>

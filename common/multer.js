@@ -18,5 +18,4 @@ var storage = multer.diskStorage({
 
 module.exports.upload = multer({
   storage: storage,
-  // dest :'../public/images',
 } );
